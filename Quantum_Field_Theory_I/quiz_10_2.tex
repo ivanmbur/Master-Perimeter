@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{slashed}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tensor}
+
+\author{Iván Mauricio Burbano Aldana}
+\title{Quantum Field Theory I: Quiz 10}
+
+\begin{document}
+
+\maketitle
+
+Considering the Lagrangian $\mathcal{L}=\overline{\psi}(i\slashed{\partial}-m)\psi=\overline{\psi}_b(i\gamma\indices{^{\mu b}_a}\partial_\mu-m\delta\indices{^b_a})\psi^a$ we have
+\begin{equation}
+\begin{aligned}
+\pdv{\mathcal{L}}{\psi^a}=&-m\overline{\psi}_a,\\
+\pdv{\mathcal{L}}{\partial_\mu\psi^a}=&i\overline{\psi}_b\gamma\indices{^{\mu b}_a}.
+\end{aligned}
+\end{equation}
+Thus the Euler-Lagrange equations are 
+\begin{equation}
+0=\partial_\mu\pdv{\mathcal{L}}{\partial_\mu\psi^a}-\pdv{\mathcal{L}}{\psi^a}=i\partial_\mu\overline{\psi}_b\gamma\indices{^{\mu b}_a}+m\overline{\psi}_a=\overline{\psi}_b(i\overset{\leftarrow}{\partial}_\mu\gamma\indices{^{\mu b}_a}+m\delta\indices{^b_a}).
+\end{equation}
+Supressing the Dirac indices we obtain the more familiar form
+\begin{equation}
+\overline{\psi}(i\overset{\leftarrow}{\slashed{\partial}}+m)\equiv\overline{\psi}(i\overset{\leftarrow}{\partial}_\mu\gamma^\mu+m)=0.
+\end{equation}
+
+
+\end{document}

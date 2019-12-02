@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{enumerate}
+
+\title{Quantum Field Theory I: Quiz 2}
+\author{Iván Mauricio Burbano Aldana}
+\date{October 2019}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}[a)]
+
+\item We calculate directly
+
+\begin{equation}
+\begin{aligned}
+&i\int\dd[3]\vb{x}e^{-i\vb{k}\vdot\vb{x}}\qty(\pi(\vb{x})-iE_{\vb{k}}\varphi(\vb{x}))=\\
+&i\int\frac{\dd[3]\vb{x}\dd[3]\vb{p}}{(2\pi)^32E_{\vb{p}}}\left(-iE_{\vb{p}}\qty(a(\vb{p})e^{i(-\vb{k}+\vb{p})\vdot\vb{x}}-a(\vb{p})^\dagger e^{i(-\vb{k}-\vb{p})\vdot\vb{x}})\right.\\
+&\left.-iE_{\vb{k}}\qty(a(\vb{p})e^{i(-\vb{k}+\vb{p})\vdot\vb{x}}+a(\vb{p})^\dagger e^{i(-\vb{k}-\vb{p})\vdot\vb{x}})\right)=\\
+&\int\frac{\dd[3]{\vb{p}}}{2E_{\vb{p}}}\left(E_{\vb{p}}\qty(a(\vb{p})\delta(-\vb{k}+\vb{p})-a(\vb{p})^\dagger \delta(-\vb{k}-\vb{p}))\right.\\
+&\left.+E_{\vb{k}}\qty(a(\vb{p})\delta(-\vb{k}+\vb{p})+a(\vb{p})^\dagger \delta(-\vb{k}-\vb{p}))\right)=\\
+&\frac{1}{2E_{\vb{k}}}\qty(E_{\vb{k}}a(\vb{k})+E_{\vb{k}}a(\vb{k}))+\frac{1}{2E_{-\vb{k}}}\qty(-E_{-\vb{k}}a(-\vb{k})^\dagger+E_{\vb{k}}a(-\vb{k})^\dagger)=\\
+&\frac{1}{2E_{\vb{k}}}\qty(E_{\vb{k}}a(\vb{k})+E_{\vb{k}}a(\vb{k}))+\frac{1}{2E_{\vb{k}}}\qty(-E_{\vb{k}}a(-\vb{k})^\dagger+E_{\vb{k}}a(-\vb{k})^\dagger)=a(\vb{k}).
+\end{aligned}
+\end{equation}
+Similarly,
+\begin{equation}
+\begin{aligned}
+&i\int\dd[3]\vb{x}e^{i\vb{k}\vdot\vb{x}}\qty(-\pi(\vb{x})-iE_{\vb{k}}\varphi(\vb{x}))=\\
+&i\int\frac{\dd[3]\vb{x}\dd[3]\vb{p}}{(2\pi)^32E_{\vb{p}}}\left(iE_{\vb{p}}\qty(a(\vb{p})e^{i(\vb{k}+\vb{p})\vdot\vb{x}}-a(\vb{p})^\dagger e^{i(\vb{k}-\vb{p})\vdot\vb{x}})\right.\\
+&\left.-iE_{\vb{k}}\qty(a(\vb{p})e^{i(\vb{k}+\vb{p})\vdot\vb{x}}+a(\vb{p})^\dagger e^{i(\vb{k}-\vb{p})\vdot\vb{x}})\right)=\\
+&\int\frac{\dd[3]{\vb{p}}}{2E_{\vb{p}}}\left(-E_{\vb{p}}\qty(a(\vb{p})\delta(\vb{k}+\vb{p})-a(\vb{p})^\dagger \delta(\vb{k}-\vb{p}))\right.\\
+&\left.+E_{\vb{k}}\qty(a(\vb{p})\delta(\vb{k}+\vb{p})+a(\vb{p})^\dagger \delta(\vb{k}-\vb{p}))\right)=\\
+&\frac{1}{2E_{-\vb{k}}}\qty(-E_{-\vb{k}}a(-\vb{k})+E_{\vb{k}}a(-\vb{k}))+\frac{1}{2E_{\vb{k}}}\qty(E_{\vb{k}}a(\vb{k})^\dagger+E_{\vb{k}}a(\vb{k})^\dagger)=\\
+&\frac{1}{2E_{\vb{k}}}\qty(-E_{\vb{k}}a(-\vb{k})+E_{\vb{k}}a(-\vb{k}))+\frac{1}{2E_{\vb{k}}}\qty(E_{\vb{k}}a(\vb{k})^\dagger+E_{\vb{k}}a(\vb{k})^\dagger)=a(\vb{k})^\dagger.
+\end{aligned}
+\end{equation}
+
+\item We have
+\begin{equation}
+\begin{aligned}
+[a(\vb{p}),a(\vb{k})^{\dagger}]=&-\int\dd[3]\vb{x}\dd[3]\vb{y}e^{i(-\vb{p}\vdot\vb{x}+\vb{k}\vdot\vb{y})}\left([\pi(\vb{x}),\pi(\vb{y})]-iE_{\vb{k}}[\pi(\vb{x}),\varphi(\vb{y})]\right.\\
+&\left.+iE_{\vb{p}}[\varphi(\vb{x}),\pi(\vb{y})]-E_{\vb{p}}E_{\vb{k}}[\varphi(\vb{x}),\varphi(\vb{y})]\right)\\
+=&-\int\dd[3]\vb{x}\dd[3]\vb{y}e^{i(-\vb{p}\vdot\vb{x}+\vb{k}\vdot\vb{y})}\qty(iE_{\vb{k}}[\varphi(\vb{y}),\pi(\vb{x})].+iE_{\vb{p}}[\varphi(\vb{x}),\pi(\vb{y})])\\
+=&-\int\dd[3]\vb{x}\dd[3]\vb{y}e^{i(-\vb{p}\vdot\vb{x}+\vb{k}\vdot\vb{y})}i\qty(E_{\vb{k}}+E_{\vb{p}})i\delta(\vb{x}-\vb{y})\\
+=&\int\dd[3]\vb{x}e^{i(-\vb{p}+\vb{k})\vdot\vb{x}}\qty(E_{\vb{k}}+E_{\vb{p}})=(E_{\vb{k}}+E_{\vb{p}})(2\pi)^3\delta(\vb{k}-\vb{p})\\
+=&2E_{\vb{p}}(2\pi)^3\delta(\vb{p}-\vb{k})\\
+\end{aligned}
+\end{equation}
+
+\end{enumerate}
+
+\end{document}

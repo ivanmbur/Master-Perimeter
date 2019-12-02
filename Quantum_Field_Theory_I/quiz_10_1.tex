@@ -1,0 +1,35 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{slashed}
+\usepackage{amsmath}
+
+\author{Iván Mauricio Burbano Aldana}
+\title{Quantum Field Theory I: Quiz 10}
+
+\begin{document}
+
+\maketitle
+
+Notice that the Dirac operator is in a certain sense the square root of the Klein-Gordon operator
+
+\begin{equation}
+\begin{aligned}
+(i\slashed{\partial}-m)(i\slashed{\partial}+m)=&-\slashed{\partial}^2-m^2+i\slashed{\partial}m-i\slashed{\partial}m
+=-\gamma^\mu\gamma^\nu\partial_{\mu}\partial_{\nu}-m^2\\
+=&-\gamma^\mu\gamma^\nu\frac{1}{2}(\partial_{\mu}\partial_{\nu}+\partial_{\nu}\partial_{\mu})-m^2\\
+=&-\frac{1}{2}(\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu)\partial_\mu\partial_\nu-m^2=-\frac{1}{2}2\eta^{\mu\nu}\partial_\mu\partial_\nu-m^2\\
+=&-(\partial^2+m^2).
+\end{aligned}
+\end{equation}
+
+Thus, we have
+
+\begin{equation}
+\begin{aligned}
+(i\slashed{\partial}_x-m)S_F(x-y)=&(i\slashed{\partial}-m)(i\slashed{\partial}+m)\Delta_F(x-y)\\
+=&-(\partial^2_x+m^2)\Delta_F(x-y)=i\delta(x-y).
+\end{aligned}
+\end{equation}
+
+\end{document}

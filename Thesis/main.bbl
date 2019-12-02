@@ -1,0 +1,339 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Fiorenza2008}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c34ee94063f72cc645e4e2424ebb4184}{%
+           family={Fiorenza},
+           familyi={F\bibinitperiod},
+           given={Domenico},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c34ee94063f72cc645e4e2424ebb4184}
+      \strng{fullhash}{c34ee94063f72cc645e4e2424ebb4184}
+      \strng{bibnamehash}{c34ee94063f72cc645e4e2424ebb4184}
+      \strng{authorbibnamehash}{c34ee94063f72cc645e4e2424ebb4184}
+      \strng{authornamehash}{c34ee94063f72cc645e4e2424ebb4184}
+      \strng{authorfullhash}{c34ee94063f72cc645e4e2424ebb4184}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The aim of these notes is to introduce the quantum master equation {\$}\backslash{\{}S,S\backslash{\}}-2i\backslashhbar\backslashDelta S=0{\$}, and to show its relations to the theory of Lie algebras representations and to perturbative expansions of Gaussian integrals. The relations of the classical master equation {\$}\backslash{\{}S,S\backslash{\}}=0{\$} with the BRST formalisms are also described. Being an introduction, only finite-dimensional examples will be considered.}
+      \field{eprintclass}{math}
+      \field{eprinttype}{arXiv}
+      \field{title}{{An introduction to the Batalin-Vilkovisky formalism}}
+      \field{year}{2008}
+      \verb{eprint}
+      \verb 0402057
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/0402057.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/math/0402057
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/math/0402057
+      \endverb
+    \endentry
+    \entry{Hewitt1975}{book}{}
+      \name{author}{2}{}{%
+        {{hash=bad518edbc49f555fc80bc4f4feebbea}{%
+           family={Hewitt},
+           familyi={H\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=501824064895dac303f45ca44dba236c}{%
+           family={Stromberg},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{87e6739c57b668cec785683d0ed0891c}
+      \strng{fullhash}{87e6739c57b668cec785683d0ed0891c}
+      \strng{bibnamehash}{87e6739c57b668cec785683d0ed0891c}
+      \strng{authorbibnamehash}{87e6739c57b668cec785683d0ed0891c}
+      \strng{authornamehash}{87e6739c57b668cec785683d0ed0891c}
+      \strng{authorfullhash}{87e6739c57b668cec785683d0ed0891c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-90138-8}
+      \field{title}{{Real and Abstract Analysis}}
+      \field{year}{1975}
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Hewitt, Stromberg - 1975 - Real and Abstract Analysis.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Rudin1991}{book}{}
+      \name{author}{1}{}{%
+        {{hash=33be2fc2739d3493c6d6cc5d56a4c41e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill, Inc.}%
+      }
+      \strng{namehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{fullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{bibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorbibnamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authornamehash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \strng{authorfullhash}{33be2fc2739d3493c6d6cc5d56a4c41e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This classic text is written for graduate courses in functional analysis. This text is used in modern investigations in analysis and applied mathematics. This new edition includes up-to-date presentations of topics as well as more examples and exercises. New topics include Kakutani's fixed point theorem, Lamonosov's invariant subspace theorem, and an ergodic theorem.This text is part of the Walter Rudin Student Series in Advanced Mathematics.}
+      \field{edition}{2nd}
+      \field{eprinttype}{arXiv}
+      \field{issn}{0002-9947}
+      \field{title}{{Functional Analysis}}
+      \field{year}{1991}
+      \verb{eprint}
+      \verb arXiv:1011.1669v3
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Rudin - 1991 - Functional Analysis.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Kadison1997}{book}{}
+      \name{author}{2}{}{%
+        {{hash=58cb4aeafc4c85b5d55f1acb6b24919a}{%
+           family={Kadison},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima V.},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=056e3cf1789442765a12c1b943c2204b}{%
+           family={Ringrose},
+           familyi={R\bibinitperiod},
+           given={John\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{17f4fdcf80193a1f96daac65b53dfb69}
+      \strng{fullhash}{17f4fdcf80193a1f96daac65b53dfb69}
+      \strng{bibnamehash}{17f4fdcf80193a1f96daac65b53dfb69}
+      \strng{authorbibnamehash}{17f4fdcf80193a1f96daac65b53dfb69}
+      \strng{authornamehash}{17f4fdcf80193a1f96daac65b53dfb69}
+      \strng{authorfullhash}{17f4fdcf80193a1f96daac65b53dfb69}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{{Fundamentals of the Theory of Operator Algebras: Elementary Theory}}
+      \field{volume}{1}
+      \field{year}{1997}
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Kadison, Ringrose - 1997 - Fundamentals of the Theory of Operator Algebras Elementary Theory.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Karp1981}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f45d7c591d48fb87c0e7214e5f2ca008}{%
+           family={Karp},
+           familyi={K\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{f45d7c591d48fb87c0e7214e5f2ca008}
+      \strng{fullhash}{f45d7c591d48fb87c0e7214e5f2ca008}
+      \strng{bibnamehash}{f45d7c591d48fb87c0e7214e5f2ca008}
+      \strng{authorbibnamehash}{f45d7c591d48fb87c0e7214e5f2ca008}
+      \strng{authornamehash}{f45d7c591d48fb87c0e7214e5f2ca008}
+      \strng{authorfullhash}{f45d7c591d48fb87c0e7214e5f2ca008}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Stokes' theorem was first extended to noncompact manifolds by Gaffney. This paper presents a version of this theorem that includes Gaffney's result (and neither covers nor is covered by Yau's extension of Gaffney's theorem). Some applications of the main result to the study of subharmonic functions on noncompact manifolds are also given.}
+      \field{issn}{00029939, 10886826}
+      \field{journaltitle}{Proceedings of the American Mathematical Society}
+      \field{number}{3}
+      \field{title}{{On Stokes' Theorem for Noncompact Manifolds}}
+      \field{volume}{82}
+      \field{year}{1981}
+      \field{pages}{487\bibrangedash 490}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.2307/2043967
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/2043967.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2043967
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2043967
+      \endverb
+    \endentry
+    \entry{Costello2016}{article}{}
+      \name{author}{2}{}{%
+        {{hash=59e3a1bbd35800af2484773194fecb92}{%
+           family={Costello},
+           familyi={C\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4fa868ae18a6fdd1e064d305c9c56fe4}{%
+           family={Gwilliam},
+           familyi={G\bibinitperiod},
+           given={Owen},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c10fc950640c892e2f46dfc65904ec52}
+      \strng{fullhash}{c10fc950640c892e2f46dfc65904ec52}
+      \strng{bibnamehash}{c10fc950640c892e2f46dfc65904ec52}
+      \strng{authorbibnamehash}{c10fc950640c892e2f46dfc65904ec52}
+      \strng{authornamehash}{c10fc950640c892e2f46dfc65904ec52}
+      \strng{authorfullhash}{c10fc950640c892e2f46dfc65904ec52}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Factorization Algebras in Quantum Field Theory}}
+      \field{volume}{1}
+      \field{year}{2016}
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/vol1may8.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://people.mpim-bonn.mpg.de/gwilliam/vol1may8.pdf
+      \endverb
+      \verb{url}
+      \verb http://people.mpim-bonn.mpg.de/gwilliam/vol1may8.pdf
+      \endverb
+      \keyw{file:///C:/Users/iburbanoaldana/Downloads/vol2may8}
+    \endentry
+    \entry{Gwilliam2018}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=4fa868ae18a6fdd1e064d305c9c56fe4}{%
+           family={Gwilliam},
+           familyi={G\bibinitperiod},
+           given={Owen},
+           giveni={O\bibinitperiod}}}%
+        {{hash=2fdd1b88c66587dacf9530ffb8dc0464}{%
+           family={Johnson-Freyd},
+           familyi={J\bibinithyphendelim F\bibinitperiod},
+           given={Theo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=6e3c728a4819bfbf74e45e1ccf4b5987}{%
+           family={Ayala},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fe9ff8deaffced420e1b155c083b3d37}{%
+           family={Freed},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=be45c9758a51118b93cad681eb895d7c}{%
+           family={Grady},
+           familyi={G\bibinitperiod},
+           given={Ryan\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{ab0787e3863e41040aa05a1396d51e73}
+      \strng{fullhash}{ab0787e3863e41040aa05a1396d51e73}
+      \strng{bibnamehash}{ab0787e3863e41040aa05a1396d51e73}
+      \strng{authorbibnamehash}{ab0787e3863e41040aa05a1396d51e73}
+      \strng{authornamehash}{ab0787e3863e41040aa05a1396d51e73}
+      \strng{authorfullhash}{ab0787e3863e41040aa05a1396d51e73}
+      \strng{editorbibnamehash}{eaed418501a25b13d4e4951620ec3b18}
+      \strng{editornamehash}{eaed418501a25b13d4e4951620ec3b18}
+      \strng{editorfullhash}{eaed418501a25b13d4e4951620ec3b18}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Batalin-Vilkovisky formalism in quantum field theory was originally invented to avoid the difficult problem of finding diagrammatic descriptions of oscillating integrals with degenerate critical points. But since then, BV algebras have become interesting objects of study in their own right, and mathematicians sometimes have good understanding of the homological aspects of the story without any access to the diagrammatics. In this note we reverse the usual direction of argument: we begin by asking for an explicit calculation of the homology of a BV algebra, and from it derive Wick's Theorem and the other Feynman rules for finite-dimensional integrals.}
+      \field{booktitle}{Topology and Quantum Theory in Interaction}
+      \field{eprinttype}{arXiv}
+      \field{title}{{How to derive Feynman diagrams for finite-dimensional integrals directly from the BV formalism}}
+      \field{year}{2018}
+      \field{pages}{175\bibrangedash 185}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1090/conm/718/14479
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1202.1554v1
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/1202.1554.pdf:pdf
+      \endverb
+      \keyw{path integral,quantum mechanics}
+    \endentry
+    \entry{Hormander2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c2553b671df63eec279a1059ab372509}{%
+           family={H{ö}rmander},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c2553b671df63eec279a1059ab372509}
+      \strng{fullhash}{c2553b671df63eec279a1059ab372509}
+      \strng{bibnamehash}{c2553b671df63eec279a1059ab372509}
+      \strng{authorbibnamehash}{c2553b671df63eec279a1059ab372509}
+      \strng{authornamehash}{c2553b671df63eec279a1059ab372509}
+      \strng{authorfullhash}{c2553b671df63eec279a1059ab372509}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-3-540-00662-6}
+      \field{series}{Classics in Mathematics}
+      \field{title}{{The Analysis of Linear Partial Differential Operators I: Distribution Theory and Fourier Analysis}}
+      \field{year}{2003}
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/(Classics in Mathematics 256) Lars H{\"{o}}rmander (auth.) - The Analysis of Linear Partial Differential Operators I{\_} Distribution Theory and Fourier Analysis-Springer-Verlag Berlin Heidelberg (2003).pdf:pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

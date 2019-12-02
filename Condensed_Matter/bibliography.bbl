@@ -1,0 +1,117 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Ashcroft1976}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a2b8f29a9323ac2977edd5b5e7888a84}{%
+           family={Ashcroft},
+           familyi={A\bibinitperiod},
+           given={Neil\bibnamedelima W.},
+           giveni={N\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=711617251066ebdd9d8e58c101e03ed3}{%
+           family={Mermin},
+           familyi={M\bibinitperiod},
+           given={N.\bibnamedelimi David},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Harcourt College Publishers}%
+      }
+      \strng{namehash}{f60683403a92a32e002be743cb4a5e4b}
+      \strng{fullhash}{f60683403a92a32e002be743cb4a5e4b}
+      \strng{bibnamehash}{f60683403a92a32e002be743cb4a5e4b}
+      \strng{authorbibnamehash}{f60683403a92a32e002be743cb4a5e4b}
+      \strng{authornamehash}{f60683403a92a32e002be743cb4a5e4b}
+      \strng{authorfullhash}{f60683403a92a32e002be743cb4a5e4b}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-03-083993-9}
+      \field{title}{{Solid State Physics}}
+      \field{year}{1976}
+      \true{nocite}
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/(Solid State Physics) Neil W. Ashcroft, N. David Mermin-Brooks Cole (1976).pdf:pdf
+      \endverb
+    \endentry
+    \entry{Mahan2011}{book}{}
+      \name{author}{1}{}{%
+        {{hash=94a1ca7b6b1521e603bd25add2577591}{%
+           family={Mahan},
+           familyi={M\bibinitperiod},
+           given={Gerald\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{94a1ca7b6b1521e603bd25add2577591}
+      \strng{fullhash}{94a1ca7b6b1521e603bd25add2577591}
+      \strng{bibnamehash}{94a1ca7b6b1521e603bd25add2577591}
+      \strng{authorbibnamehash}{94a1ca7b6b1521e603bd25add2577591}
+      \strng{authornamehash}{94a1ca7b6b1521e603bd25add2577591}
+      \strng{authorfullhash}{94a1ca7b6b1521e603bd25add2577591}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-691-14016-2}
+      \field{title}{{Condensed Matter in a Nutshell}}
+      \field{year}{2011}
+      \true{nocite}
+      \verb{file}
+      \verb :C$\backslash$:/Users/iburbanoaldana/Downloads/(In a Nutshell) G. D. Mahan - Condensed Matter in a Nutshell-Princeton University Press (2011).pdf:pdf
+      \endverb
+    \endentry
+    \entry{Schuller2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ecc3fa675c17b9bbfc6794ea99804c67}{%
+           family={Schuller},
+           familyi={S\bibinitperiod},
+           given={Frederic},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecc3fa675c17b9bbfc6794ea99804c67}
+      \strng{fullhash}{ecc3fa675c17b9bbfc6794ea99804c67}
+      \strng{bibnamehash}{ecc3fa675c17b9bbfc6794ea99804c67}
+      \strng{authorbibnamehash}{ecc3fa675c17b9bbfc6794ea99804c67}
+      \strng{authornamehash}{ecc3fa675c17b9bbfc6794ea99804c67}
+      \strng{authorfullhash}{ecc3fa675c17b9bbfc6794ea99804c67}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Lectures on Quantum Theory}}
+      \field{year}{2016}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.youtube.com/playlist?list=PLPH7f{\_}7ZlzxQVx5jRjbfRGEzWY{\_}upS5K6
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/playlist?list=PLPH7f%7B%5C_%7D7ZlzxQVx5jRjbfRGEzWY%7B%5C_%7DupS5K6
+      \endverb
+      \warn{\item Entry 'Schuller2016' (../Thesis/library.bib): Invalid format '2019-19-11' of date field 'urldate' - ignoring}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

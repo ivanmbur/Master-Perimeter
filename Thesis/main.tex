@@ -1,0 +1,50 @@
+\documentclass{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{tensor}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{faktor}
+\usepackage{braket}
+\usepackage[sorting=none]{biblatex}
+\usepackage{hyperref}
+\usepackage{theoremref}
+\usepackage{todonotes}
+
+\addbibresource{library.bib}
+
+\title{Provisionary: The BV formalism}
+\author{Iván Mauricio Burbano Aldana}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\altg}{\bigwedge\nolimits^\bullet\g^*}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\vol}{vol}
+
+\newcommand{\g}{\mathfrak{g}}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Motivations for the BV Formalism}\label{ch:motivations}
+\input{chapters/bv_formalism}
+
+\chapter{Graded Linear Algebra}
+\input{chapters/graded_algebra}
+
+\printbibliography
+
+\end{document}

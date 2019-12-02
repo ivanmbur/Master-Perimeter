@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+
+\title{Quantum Field Theory I: Quiz 3}
+\author{Iván Mauricio Burbano Aldana}
+
+\begin{document}
+
+\maketitle
+
+We simply compute
+
+\begin{equation}
+\begin{aligned}
+\mel{\vb{p}}{\varphi(x)}{0}&=\int\frac{\dd[3]\vb{k}}{(2\pi)^32E_{\vb{k}}}\mel{\vb{p}}{a(\vb{k})^\dagger}{0}e^{ik\cdot x}|_{k^0=E_{\vb{k}}}\\
+&=\int\frac{\dd[3]\vb{k}}{(2\pi)^32E_{\vb{k}}}\mel{0}{a(\vb{p})a(\vb{k})^\dagger}{0}e^{ik\cdot x}|_{k^0=E_{\vb{k}}}\\
+&=\int\frac{\dd[3]\vb{k}}{(2\pi)^32E_{\vb{k}}}(2\pi)^32E_{\vb{p}}\delta(\vb{p}-\vb{k})e^{ik\cdot x}|_{k^0=E_{\vb{k}}}=e^{ip\cdot x}|_{p^0=E_{\vb{p}}}
+\end{aligned}
+\end{equation}
+
+\end{document}

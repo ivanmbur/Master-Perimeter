@@ -1,0 +1,522 @@
+In order to motivate the BV formalism we will start by considering several of its subfeatures. These will consist of seemingly disconnected homological reformulations of rather well known mathematical objects. Namely, we will consider Lie algebras, their representations, and Gaussian integration, all of which are of fundamental importance in Quantum Field Theory. These reformulations will be studied, for the most part, in the finite dimensional setting, both for the field configurations and the symmetries acting on them. In this setting the algebraic properties are most clear. At the end we will briefly consider the infinite dimensional example of the real scalar field to exemplify how these constructions generalize. 
+
+\section{Reformulation of Lie Algebras in the BV Formalism}
+
+In physics, Lie groups usually represent symmetries of physical systems. The set of infinitesimal deviations from the identity of such groups has the structure of a Lie algebra. One can reconstruct some of the Lie group elements by a process of infinite iteration of these infinitesimal deviations. This process is known as exponentiation. Depending on the group, this process yields more or less information. However, it is always true that this process reconstructs a neighborhood of the identity.
+
+To begin our excursion into the BV formalism, we will recast the definition of a Lie algebra in the BV language. For now this will seem like just a mathematical curiosity. However, we will later see the power of this point of view. This and the following section are mainly taken from \cite{Fiorenza2008}.
+
+For the rest of this section, let us fix $\g$ to be a Lie algebra. For our purposes it will be useful to condense the requirement of bilinearity and antisymmetry of the bracket into the statement that it is a linear function
+\begin{equation}
+\begin{aligned}
+\left[~,~\right]:\g\wedge\g&\rightarrow\g\\
+X\wedge Y&\mapsto[X,Y]
+\end{aligned}
+\end{equation}
+To make our formulas simpler, will suppress the $\wedge$ symbol from now on. Whenever two elements of a Lie algebra are concatenated, this will correspond to their wedge product. The same applies to the dual of a Lie algebra. We can now consider the dual of this map
+\begin{equation}
+\delta:=[~,~]^*:\g^*\rightarrow\g^*\wedge\g^*\subseteq\altg
+\end{equation}
+To be explicit, let us calculate this map on a basis $\qty{X_1,\dots,X_{n:=\dim\g}}$ of $\g^*$. Let $f\indices{^a_{bc}}$ be the associated structure constants, i.e.
+\begin{equation}
+f\indices{^a_{bc}}=c^a([X_b,X_c]),
+\end{equation} 
+where $\qty{c^1,\dots,c^n}$ is the dual basis. These are of course antisymmetric in the bottom indices and satisfy the Jacobi identity
+\begin{equation}
+\begin{aligned}
+0=&c^a([X_b,[X_c,X_d]]+[X_d,[X_b,X_c]]+[X_c,[X_d,X_b]])\\
+=&c^a(f\indices{^e_{cd}}[X_b,X_e]+f\indices{^e_{bc}}[X_d,X_e]+f\indices{^e_{db}}[X_c,X_e])\\
+=&f\indices{^a_{be}}f\indices{^e_{cd}}+f\indices{^a_{de}}f\indices{^e_{bc}}+f\indices{^a_{ce}}f\indices{^e_{db}}.  
+\end{aligned}
+\end{equation} 
+Then
+\begin{equation}\label{eq:brst_lie_coordinates}
+\begin{aligned}
+\delta c^f(X_d X_e)=&c^f([X_d,X_e])=f\indices{^g_{de}}c^f(X_g)=f\indices{^f_{de}}\\
+=&\frac{1}{2}f\indices{^f_{bc}}(\delta\indices{^b_d}\delta\indices{^c_e}-\delta\indices{^b_e}\delta\indices{^c_d})=\frac{1}{2}f\indices{^f_{bc}}c^bc^c(X_dX_e)\\
+&=\frac{1}{2}f\indices{^a_{bc}}c^bc^c(X_dX_e).
+\end{aligned}
+\end{equation}
+
+We would like to extend $\delta$ to a map on $\altg$ such that it acts like a derivative. In particular, we would like $\delta$ to satisfy a version of Leibniz rule. In the algebra $\altg$, the elements of $g^*$ are anticommuting. We thus want the Leibniz rule $\delta$ satisfies to reflect this structure. To do this, we define $\delta$ on $\bigwedge\nolimits^k\g^\star$ by
+\begin{equation}\label{eq:leibniz_lie}
+\begin{aligned}
+\delta(f^1\cdots f^k)=&\delta f^1f^2\cdots f^k+\cdots+ (-1)^{j-1}f^1\cdots f^{j-1}\delta f^jf^{j+1}\cdots f^k\\
+&+\cdots+(-1)^{k-1}f^1\cdots f^{k-1}\delta f^k\in\bigwedge\nolimits^{k+1}\g^*.
+\end{aligned}
+\end{equation} 
+This extends $\delta$ to a map
+\begin{equation}
+\delta:\altg\rightarrow\altg.
+\end{equation}
+In fact, we have done a lot more. We've created a cochain complex
+\begin{equation}\label{eq:brst_lie}
+\begin{tikzcd}
+0\arrow[r,"\delta_0"]&\g^*\arrow[r,"\delta_1"]&\g^*\wedge\g^*\arrow[r,"\delta_2"]&\cdots\arrow[r,"\delta_{k-1}"]&\bigwedge\nolimits^{k}\g^*\arrow[r,"\delta_k"]&\dots\\
+\arrow[r,"\delta_{n-1}"]&\bigwedge\nolimits^n\g^*\arrow[r,"\delta_n"]&0.
+\end{tikzcd}
+\end{equation}
+In here, $\delta_0=0$ and $\delta_k:=\delta|_{\bigwedge^k\g^*}$. 
+
+We now have to proof $\delta^2=0$. To see this, let us show that $\delta^2f=0$ for all $f\in\g^*$. To compute this, we've got to first understand $\delta_2$. For this, take $f,g\in\g^*$. Then
+\begin{equation}
+\delta(fg)=\delta fg-f\delta g.
+\end{equation} 
+To understand maps such as $\delta f g$ or $f\delta g$, we need to ponder on the isomorphism $\qty(\bigwedge^3\g)^*=\bigwedge^3\g^*$. Take $h\in\g^*$ and $X,Y,Z\in\g$. Then
+\begin{equation}
+\begin{aligned}
+fgh(XYZ)=&\det\mqty[f(X) & f(Y) & f(Z)\\
+g(X) & g(Y) & g(Z)\\
+h(X) & h(Y) & h(Z)]\\
+=&f(X)gh(YZ)+f(Y)gh(ZX)+f(Z)gh(XY)\\
+=&fg(XY)h(Z)+fg(ZX)h(Y)+fg(YZ)h(X),
+\end{aligned}
+\end{equation}
+as is easily seen from the expansion into cofactors. Thus,
+\begin{equation}
+\begin{aligned}
+\delta(fg)(XYZ)=&\delta f(XY)g(Z)+\delta f(ZX)g(Y)+\delta f(YZ)g(X)\\
+&-f(X)\delta g(YZ)-f(Y)\delta g(ZX)-f(Z)\delta g(XY)\\
+=&f([X,Y])g(Z)+f([Z,X])g(Y)+f([Y,Z])g(X)\\
+&-f(X)g([Y,Z])-f(Y)g([Z,X])-f(Z)g([X,Y])\\
+=&fg([X,Y]Z+[Z,X]Y+[Y,Z]X).
+\end{aligned}
+\end{equation} 
+Finally, we readily compute
+\begin{equation}
+\begin{aligned}
+\delta^2f(XYZ)=&\delta f([X,Y]Z+[Z,X]Y+[Y,Z]X)\\
+=&f([[X,Y],Z]+[[Z,X],Y]+[[Y,Z],X])=f(0)=0,
+\end{aligned}
+\end{equation}
+due to the Jacobi identity. This then implies the claim. Indeed for all $f^1,\dots,f^k\in\g^*$ we have
+\begin{equation}\label{eq:differential_property}
+\begin{aligned}
+\delta^2(f^1\cdots f^k)=&\delta\sum_{r=1}^k (-1)^{r-1} f^1\cdots\delta f^r\cdots f^k\\
+=&\sum_{r=1}^k\sum_{s=1}^r (-1)^{r+s-2} f^1\cdots\delta f^s\cdots\delta f^r\cdots f^k\\
+&+\sum_{r=1}^kf^1\cdots\delta^2f^r\cdots f^k+\\
+&\sum_{r=1}^k\sum_{s=r+1}^k (-1)^{r+s-1} f^1\cdots\delta f^r\cdots\delta f^s\cdots f^k\\
+=&\sum_{r=1}^kf^1\cdots\delta^2f^r\cdots f^k.\\
+\end{aligned}
+\end{equation}
+Indeed, ff $i\neq j$ then the term $(r,s)=(i,j)$ cancels the term $(r,s)=(j,i)$.
+
+Let us finish by noting that the proof above simplifies considerably in coordinates. To see this, let $\mathbb{F}$ be the field where $\g$ is defined and let us define the operator in $\qty(\g^*)^*\cong\g$
+\begin{equation}
+\begin{aligned}
+\pdv{c^a}:\g^*&\rightarrow\mathbb{F}\\
+c^b&\mapsto\pdv{c^b}{c^a}:=\delta\indices{^b_a}.
+\end{aligned}
+\end{equation}
+Then, when restricted to $\g^*$, computation \eqref{eq:brst_lie_coordinates} shows
+\begin{equation}
+\delta=\frac{1}{2}f\indices{^a_{bc}}c^b c^c\pdv{c^a}\in\g^*\wedge\g^*\otimes\g\cong\End(\g^*,\g^*\wedge\g^*).
+\end{equation}
+Much like with $\delta$, we can extend $\pdv*{c^a}$ to an operator on $\altg$ via the Leibniz rule. Thus, for all $f^1,\cdots,f^k\in\g^*$ we declare
+\begin{equation}\label{eq:leibniz_pdv_lie}
+\begin{aligned}
+\pdv{c^a}(f^1\cdots f^k):=&\pdv{f^1}{c^a}f^2\cdots f^k+\cdots\\
+&+ (-1)^{j-1}f^1\cdots f^{j-1}\pdv{f^j}{c^a}f^{j+1}\cdots f^k\\
+&+\cdots+(-1)^{k-1}f^1\cdots f^{k-1}\pdv{f^k}{c^a}\in\bigwedge\nolimits^{k-1}\g^*.
+\end{aligned}
+\end{equation}
+In particular, since they coincide on $\g$ and satisfy the same Leibniz rule, for $c^bc^c$ is a commuting element in $\altg$, we conclude that
+\begin{equation}
+\delta=\frac{1}{2}f\indices{^a_{bc}}c^b c^c\pdv{c^a}
+\end{equation}
+in all of $\altg$. We can thus prove that $\delta^2=0$ through the computation
+\begin{equation}\label{eq:differential_lie}
+\begin{aligned}
+\delta^2c^a=&\delta\qty(\frac{1}{2}f\indices{^b_{cd}}c^cc^d\pdv{c^a}{c^b})=\frac{1}{4}f\indices{^e_{fg}}f\indices{^a_{cd}}c^fc^g\pdv{c^e}(c^cc^d)\\
+=&\frac{1}{4}f\indices{^e_{fg}}f\indices{^a_{ed}}c^fc^gc^d-\frac{1}{4}f\indices{^e_{fg}}f\indices{^a_{ce}}c^fc^gc^c=-\frac{1}{2}f\indices{^e_{fg}}f\indices{^a_{ce}}c^fc^gc^c\\
+=&-\frac{1}{6}f\indices{^e_{fg}}f\indices{^a_{ce}}(c^fc^gc^c+c^cc^fc^g+c^gc^cc^f)\\
+=&-\frac{1}{6}(f\indices{^e_{fg}}f\indices{^a_{ce}}+f\indices{^e_{gc}}f\indices{^a_{fe}}+f\indices{^e_{cf}}f\indices{^a_{ge}})c^fc^gc^c=0.
+\end{aligned}
+\end{equation}
+We once again see this property is a consequence of the Jacobi identity.
+
+\section{Representations of Lie Algebras}
+
+In gauge theories, a gauge group acts on the space of fields. Considering the action of infinitesimal elements, this action induces an action of the associated Lie algebra. In this section we will model the space of field configurations as a vector space $V$. Much like before, we will set $\g$ to be a Lie algebra. We will assume that the action of $\g$ on $V$ is through a representation $\rho$.
+
+A useful way of thinking about $\rho$ is as a map
+\begin{equation}
+\begin{aligned}
+\rho:V\otimes\g&\rightarrow V\\
+v\otimes X&\mapsto \rho(X)v.
+\end{aligned}
+\end{equation}
+Indeed, in this interpretation we obtain a map
+\begin{equation}
+\begin{aligned}
+0\oplus\rho\oplus\left[~,~\right]:S^2V\oplus(V\otimes\g)\oplus\bigwedge\nolimits^2\g&\rightarrow V\otimes\g
+\end{aligned}
+\end{equation}
+Let us use the notation, to be explained below,
+\begin{equation}
+\begin{aligned}
+S^k(V_1\oplus\Pi V_2):=&\bigoplus_{j=1}^k S^jV_1\otimes \bigwedge\nolimits^{k-j}V_2,\\
+\mathcal{F}(V_1\oplus\Pi V_2)\equiv S^\bullet(V_1^*\oplus\Pi V_2^*):=&\bigoplus_{k=0}^\infty S^k(V_1^*\oplus\Pi V_2^*).
+\end{aligned}
+\end{equation} 
+for all vector spaces $V_1$ and $V_2$. Then, much like before, we can consider the dual map
+\begin{equation}
+\delta:=(0\oplus\rho\oplus\left[~,~\right])^*:V^*\otimes\g^*\rightarrow S^2(V^*\oplus\Pi\g^*)\subseteq\mathcal{F}(V\oplus\Pi \g).
+\end{equation}
+
+This map can also be extended to $\mathcal{F}(V)$ via the Leibniz rule. For this we need to give $\mathcal{F}(V_1\oplus\Pi V_2)$ the structure of an associative algebra via the multiplication map we will now describe. Take $f^1,\dots,f^j\in V_1^*$ and $g^1,\dots,g^{k-j}\in V_2^*$. We suppress the tensor symbols as follows
+\begin{equation}
+f^1\cdots f^j g^1\cdots g^{k-j}\equiv(f^1\odot\cdots\odot f^j)\otimes(g^1\wedge\cdots\wedge g^{k-j})\in S^j V_1^*\otimes\bigwedge\nolimits^{k-j}v_2^*.
+\end{equation} 
+Now, take another $\tilde{f}^1,\dots,\tilde{f}^{\tilde{j}}\in V_1^*$ and $\tilde{g}^1,\dots,\tilde{g}^{\tilde{k}-\tilde{j}}\in V_2^*$. We thus define
+\begin{equation}
+\begin{aligned}
+&(f^1\cdots f^j g^1\cdots g^{k-j})(\tilde{f}^1\cdots\tilde{f}^{\tilde{j}}\tilde{g}^1\cdots\tilde{g}^{\tilde{k}-\tilde{j}})\\
+:=&f^1\cdots f^j\tilde{f}^1\cdots\tilde{f}^{\tilde{j}}g^1\cdots g^{k-j}\tilde{g}^1\cdots\tilde{g}^{\tilde{k}-\tilde{j}}\in S^{j+\tilde{j}}V_1\otimes\bigwedge\nolimits^{k-j+\tilde{k}-\tilde{j}}V_2^*.
+\end{aligned}
+\end{equation} 
+Now we need to be careful. If we want to define a linear map through the Leibniz rule we must act in a symmetric fashion on the symmetric tensor products and in an antisymmetric fashion on the wedge products. Thus, we declare
+\begin{equation}\label{eq:leibniz_rep}
+\begin{aligned}
+\delta(f^1\dots f^j)=&\delta f^1 f^2\dots f^j+ f^1\dots f^{l-1}\delta f^l f^{l+1}\dots f^j\\
+&+f^1\dots f^{j-1}\delta f^j,\\
+\delta(g^1\dots g^{k-j})=&\delta g^1 g^2\dots g^j+(-1)^{l-1}g^1\dots g^{l-1}\delta g^l g^{l+1}\dots g^{k-j}\\
+&+(-1)^{k-j-1}g^1\dots g^{k-j-1}\delta g^{k-j},\\
+\delta(f^1\dots f^j g^1\dots g^{k-j})=&\delta(f^1\dots f^j)g^1\dots g^{k-j}+f^1\dots f^j\delta(g^1\dots g^{k-j}).
+\end{aligned}
+\end{equation}
+This again generates a linear map, known as the BRST operator,
+\begin{equation}
+\delta:\mathcal{F}(V\oplus\Pi\g)\rightarrow\mathcal{F}(V\oplus\Pi\g)
+\end{equation}
+satisfying $\delta^2=0$. 
+
+We now know that the best method for proving the last statement is by expressing $\delta$ on a basis. Let $\qty{v_1,\dots,v_{m:=\dim V}}$ and $\qty{X_1,\dots,X_{m:=\dim\g}}$ be bases for $V$ and $\g$ respectively. Take $\qty{x^1,\dots,x^m}$ and $\qty{c^1,\dots,c^n}$ to be the respective dual bases. Take $\rho\indices{^i_{ja}}:=x^i(\rho(X_a)v_j)$ and let $f\indices{^a_{bc}}$ be the structure constants corresponding to our Lie algebra basis. Then
+\begin{equation}
+\begin{aligned}
+\delta x^i(v_j v_k+v_l X_a+X_b X_c)=&x^i(\rho(X_a)v_l+[X_b,X_c])=x^i(\rho(X_a)v_l)\\
+=&\rho\indices{^i_{la}}=\rho\indices{^i_{od}}x^oc^d(v_j v_k+v_l X_a+X_b X_c),\\
+\delta c^a(v_i v_j+v_k X_b+X_c X_d)=&c^a(\rho(X_b)v_k+[X_c,X_d])=c^a([X_c,X_d])\\
+=&\frac{1}{2}f\indices{^a_{ef}}c^ec^f(X_c X_d).
+\end{aligned}
+\end{equation}
+We now introduce partial derivatives $\pdv*{x^i}$ and $\pdv*{c^a}$ by
+\begin{equation}
+\begin{aligned}
+\pdv{x^j}{x^i}=&\delta\indices{^j_i}, & \pdv{c^b}{x^i}=&0,\\
+\pdv{x^j}{c^a}=&0, & \pdv{c^b}{c^a}=&\delta\indices{^b_a}.
+\end{aligned}
+\end{equation}
+Extending these by the appropriate Leibniz rule, i.e. by taking \eqref{eq:leibniz_rep} and replacing $\delta$ with the partial derivatives, we obtain
+\begin{equation}
+\delta=\rho\indices{^i_{ja}}x^jc^a\pdv{x^i}+\frac{1}{2}f\indices{^a_{bc}}c^b c^c\pdv{c^a}.
+\end{equation}
+Then, it is clear from \eqref{eq:differential_lie} that $\delta^2c^a=0$ and $\delta^2(g^1\dots g^{k-j})=0$. On the other hand, 
+\begin{equation}
+\begin{aligned}
+\delta^2x^i=&\delta(\rho\indices{^i_{ja}}x^jc^a)=\rho\indices{^i_{ja}}\rho\indices{^k_{lb}}x^lc^b\pdv{x^j}{x^k}c^a+\frac{1}{2}\rho\indices{^i_{ja}}f\indices{^b_{cd}}c^cc^dx^j\pdv{c^a}{c^b}\\
+=&\rho\indices{^i_{ja}}\rho\indices{^j_{lb}}x^lc^bc^a+\frac{1}{2}\rho\indices{^i_{ja}}f\indices{^a_{cd}}c^cc^dx^j\\
+=&x^i(\rho(X_a)\rho(X_b)v_j)x^lc^bc^a+\frac{1}{2}x^i(\rho(f\indices{^a_{cd}}X_a))v_j)c^cc^dx^j\\
+=&x^i(\rho(X_aX_b)v_j)x^lc^bc^a+\frac{1}{2}x^i(\rho([X_c,X_d]))v_j)c^cc^dx^j\\
+=&\frac{1}{2}x^i(\rho([X_a,X_b])v_j)x^lc^bc^a+\frac{1}{2}x^i(\rho([X_c,X_d]))v_j)c^cc^dx^j=0.\\
+\end{aligned}
+\end{equation}
+In here we used the standard index manipulation trick
+\begin{equation}
+T_{ab}A^{ab}=\frac{1}{2}T_{ab}(A^{ab}-A^{ba})=\frac{1}{2}(T_{ab}-T_{ba})A^{ab},
+\end{equation}
+for all $A^{ab}$ antisymmetric in $a$ and $b$. Thus, noting that $|\delta f|=1$ for all $f\in S^\bullet V^*$, we have
+\begin{equation}
+\begin{aligned}
+\delta^2(f^1\cdots f^j)=&\delta\sum_{r=1}^k f^1\cdots\delta f^r\cdots f^j\\
+=&\sum_{r=1}^j\sum_{s=1}^r f^1\cdots\delta f^s\cdots\delta f^r\cdots f^j\\
+&+\sum_{r=1}^jf^1\cdots\delta^2f^r\cdots f^j+\\
+&\sum_{r=1}^j\sum_{s=r+1}^k (-1) f^1\cdots\delta f^r\cdots\delta f^s\cdots f^j\\
+=&\sum_{r=1}^jf^1\cdots\delta^2f^r\cdots f^j=0.\\
+\end{aligned}
+\end{equation}
+We conclude that 
+\begin{equation}
+\begin{aligned}
+&\delta^2(f^1\cdots f^jg^1\cdots g^{k-j})=\\
+&\delta(\delta(f^1\cdots f^j)g^1\cdots g^{k-j}+f^1\cdots f^j\delta(g^1\cdots g^{k-j}))=\\
+&\delta^2(f^1\cdots f^j)g^1\cdots g^{k-j}-\delta(f^1\cdots f^j)\delta(g^1\cdots g^{k-j})\\
+&+\delta(f^1\cdots f^j)\delta(g^1\cdots g^{k-j})+f^1\cdots f^j\delta^2(g^1\cdots g^{k-j})=0.
+\end{aligned}
+\end{equation}
+
+This property allows us to build cochain complexes. For example
+\begin{equation}
+\begin{tikzcd}
+0\arrow[r,"\delta_{-1}"]&\mathcal{F}(V)\arrow[r,"\delta_0"]&\mathcal{F}(V)\otimes\g^*\arrow[r,"\delta_1"]&\mathcal{F}(V)\otimes(\g^*\wedge\g^*)\\
+\arrow[r,"\delta_2"]&\cdots\arrow[r,"\delta_{n-1}"]&\mathcal{F}(V)\otimes\bigwedge\nolimits^{n}\g^*\arrow[r,"\delta_n"]& 0,
+\end{tikzcd}
+\end{equation}
+where $\mathcal{F}(V):=S^\bullet V^*$ is the ring of polynomial functions on $V$. The zeroth degree cohomology of this complex has a very nice interpretation
+\begin{equation}
+\begin{aligned}
+H^0\qty(\mathcal{F}(V)\otimes\altg,\delta):=& \faktor{\ker\delta_0}{\im\delta_{-1}}\cong\ker\delta_0\\
+=&\Set{f\in\mathcal{F}(V)|0=\delta f=\rho\indices{^i_{ja}}x^jc^a\pdv{f}{x^i}}\\
+=&\Set{f\in\mathcal{F}(V)|0=\pdv{f}{x^i}\rho\indices{^i_{ja}}}
+\end{aligned}
+\end{equation}
+To interpret this last equation, we note that $\mathcal{F}(V)$ acts on $V$ via 
+\begin{equation}
+f^1\cdots f^k(v)=f^1(v)\cdots f^k(v)\in\mathbb{F},
+\end{equation}
+for all $f^1,\dots,f^k\in V^*$ and $v\in V$. Let us now restrict to $\mathbb{F}\in\qty{\mathbb{R},\mathbb{C}}$. Then, we have an analytic definition of $\pdv*{x^i}$ on functions $f:V\rightarrow\mathbb{F}$, namely
+\begin{equation}
+{\pdv{f}{x^i}}(p):=\partial_{v_i}f(p):=\lim_{t\rightarrow 0}\frac{f(p+tv_i)-f(p)}{t},
+\end{equation}
+without the summation convention. This definition agrees with our previous since it satisfies the Leibniz rule and 
+\begin{equation}
+\pdv{x^j}{x^i}=\delta\indices{^j_i}.
+\end{equation}
+In particular, ${\pdv*{f}{x^i}}(p)$ is independent of $p$. Thus, if $\rho$ comes from a representation $R$ of a Lie group $G$ such that $\g=\text{Lie}(G)$
+\begin{equation}
+\rho(X)=\left.\dv{t}R\qty(e^{tX})\right|_{t=0},
+\end{equation} 
+we obtain
+\begin{equation}
+\left.\dv{t}f\qty(R\qty(e^{tX_a})v_j)\right|_{t=0}=\pdv{f}{x^i}x^i\qty(\left.\dv{t}R\qty(e^{tX_a})v_j\right|_{t=0})=\pdv{f}{x^i}\rho\indices{^i_{ja}}.
+\end{equation}
+We conclude that
+\begin{equation}
+H^0\qty(\mathcal{F}(V)\otimes\altg,\delta):=\Set{f\in\mathcal{F}(V)|\text{f is $G$-invariant}}
+\end{equation}
+
+\section{Gaussian Integration}
+
+In the path integral formulation of quantum field theory, expectation values are of the form
+\begin{equation}\label{eq:expectation}
+\ev{\mathcal{O}}=\frac{1}{Z}\int\mathcal{D}\varphi e^{-\frac{1}{\hbar}S(\varphi)}\mathcal{O}(\varphi),
+\end{equation}
+with the normalization factor
+\begin{equation}
+Z=\int\mathcal{D}\varphi e^{-\frac{1}{\hbar}S(\varphi)}.
+\end{equation}
+This integral only has heuristic meaning as we shall now explain. Every field configuration $\varphi$ has a probabilistic weight $\frac{1}{Z}e^{-\frac{1}{\hbar}S(\varphi)}$, where $S$ is the Euclidean action functional. Thus, if $\mathcal{O}$ is an observable, i.e. a suitable (in a sense to be determined latter) function of the fields, its expectation value is given by the sum of its value at each field configuration weighed by the probability of such a configuration. Of course, the space of all field configuration is continuous and the sum needs to be interpreted as an integral over this space against some measure $\mathcal{D}\varphi$. This is where the pitfall of the path integral formulation lies in. Such a measure in general does not exist.
+
+Before seeing how the BV formalism addresses this issue, let us reflect on why path integrals may seem reasonable at a first glance. For this purpose, we recall the following theorem:
+\begin{theorem}[Riesz's Representation Theorem]\thlabel{thm:riesz_rep}
+Let $X$ be a locally compact Hausdorff space. If $I$ is a positive linear functional on the compactly supported continuous functions $C_c(X)$ on $X$. Then, there exists a measure space structure $(X,\Sigma,\mu)$ such that
+\begin{equation}
+I(f)=\int\dd\mu f
+\end{equation}
+for all $f\in C_c(X)$.
+\end{theorem}  
+\begin{proof}
+\cite[see][Theorem 12.36]{Hewitt1975}
+\end{proof}
+Thus, if $\ev{\cdot}$ is to be a positive linear functional, it seems that the above theorem guarantees the existence of a measure that will aid us in its calculation. However, the devil lies in the details. A topological vector space, as we expect our space of field configurations to be, is locally compact if and only if it is finite dimensional \cite[see][Theorems 1.21 and 1.22]{Rudin1991}. This is not the case unless our spacetime has a finite number of points. Thus, \thref{thm:riesz_rep} thus not guarantee the existence of such a measure. 
+
+Thus, we are now faced against the problem of finding another way to calculate such a functional. Our approach is based on the fact that linear functionals are determined, up to a constant, by their kernel \cite[see][Proposition 1.1.1]{Kadison1997}. In the case where the integral does make sense, the divergence gives us a method of calculating elements of such a kernel \cite[see][equation $(*)$]{Karp1981}. Thus, such a divergence allows us to study these functionals.
+
+Let us illustrate this idea by studying the case where \thref{thm:riesz_rep} applies. We will follow \cite{Costello2016, Gwilliam2018}. Namely, consider a scalar field theory on a finite spacetime $M=\Set{p_1,\dots,p_{N}}$. The field configurations are given by real functions on $M$. This space is clearly identifiable with a real vector space $V$ of dimension $N$. Since this space is finite dimensional, we can associate to our expectation value a probability measure $\mu$. Let $(x^1,\dots,x^n)$ be the dual basis to a basis $(v_1,\dots,v_n)$ of $V$. Let us further assume $\mu$ is absolutely continuous with respect to $\dd\lambda:=\dd[N]x$ and that the Radon-Nykodim derivative $\dv*{\mu}{\lambda}$ is not vanishing . Then, taking our action to be
+\begin{equation}
+S:=-\hbar\log(\mathcal{N}\dv{\mu}{\lambda}),
+\end{equation}
+for some $\mathcal{N}\in(0,\infty)$, we obtain\footnote{For the reader that has not yet been introduced to measure theory, this can be taken as the starting point of our discussion. The material above served the purpose of illustrating how in this case \thref{thm:riesz_rep} yields to a generic integral of the form \eqref{eq:expectation}. All of the required material is however found in \cite{Hewitt1975}.}
+\begin{equation}
+\ev{f}=\frac{1}{Z}\int\dd[N]{x} e^{-\frac{1}{\hbar}S}f, \qquad Z:=\int\dd[N]{x} e^{-\frac{1}{\hbar}S}.
+\end{equation}
+The constant $\mathcal{N}$ is added because we want to identify $S$ with the action of our system, which usually doesn't lead to automatically normalized measures like $\mu$.
+
+As usual in field theory, let us now specialize to the case of 
+\begin{equation}
+S=Q+b,
+\end{equation}
+for some positive-definite quadratic form $Q$ and some polynomial $b$ of order higher\footnote{At this level considering polynomials of order one is futile since we can always complete the square.} than $3$. There is a symmetric positive matrix $A$ such that $Q=\frac{1}{2}x^iA_{ij}x^j$. We want to define a divergence $\Div_\mu$ such that 
+\begin{equation}\label{eq:gaussian_div}
+e^{-\frac{1}{\hbar}S}\Div_\mu F=\Div\qty(e^{-\frac{1}{\hbar}S}F)
+\end{equation}
+for suitable vector fields $F$ on $V$. In particular, if $F$ is a vector field with polynomial components, the rapid decrease of the exponential guarantees
+\begin{equation}\label{eq:divergences}
+\ev{\Div_\mu F}=\frac{1}{Z}\int\dd[N]{x}e^{-\frac{1}{\hbar}S}\Div_\mu F=\frac{1}{Z}\int\dd[N]{x}\Div\qty(e^{-\frac{1}{\hbar}S}F)=0.
+\end{equation}
+Equation \eqref{eq:gaussian_div} is immediately solved for these vector fields
+\begin{equation}\label{eq:divergence_formula}
+\Div_\mu F=e^{\frac{1}{\hbar}S}\Div\qty(e^{-\frac{1}{\hbar}S}F)=-\frac{1}{\hbar}\nabla S\cdot F+\nabla\cdot F=-\frac{1}{\hbar}F(S)+\nabla\cdot F,
+\end{equation}
+i.e.
+\begin{equation}
+-\hbar\Div_\mu F=x^iA_{ij}F^j+\pdv{b}{x^i}F^i-\hbar\pdv{F^i}{x^i}.
+\end{equation}
+Thus, if we let $\mathcal{F}(V):=S^\bullet V^*$ be the ring of polynomial functions on $V$ and $\Vect(V)$ be the set of all polynomial vector fields, we've just constructed a map
+\begin{equation}
+\Div_\mu:\Vect(V)\rightarrow\mathcal{F}(V).
+\end{equation}
+
+Let us take $b=0$, which corresponds to a free theory. Now consider a set of indices $i_1,\dots,i_n,j\in\{1,\dots,N\}$. We can compute
+\begin{equation}
+-\hbar\Div_\mu \qty(x^{i_1}\cdots x^{i_n}\pdv{x^j})=x^iA_{ij}x^{i_1}\cdots x^{i_n}-\hbar\sum_{r=1}^n x^{i_1}\cdots \widehat{x^{i_r}}\cdots x^{i_n}\delta\indices{^{i_r}_j}.
+\end{equation}
+Thus, if we let $A^{ij}$ be the inverse matrix to $A_{ij}$, i.e. $A^{ij}A_{jk}=\delta\indices{^i_k}$, we conclude
+\begin{equation}\label{eq:image_Q}
+\begin{aligned}
+x^ix^{i_1}\cdots x^{i_n}=&-\hbar\Div_\mu\qty(x^{i_1}\cdots x^{i_n}A^{ij}\pdv{x^j})\\
+&+\hbar\sum_{r=1}^n A^{ii_r}x^{i_1}\cdots \widehat{x^{i_r}}\cdots x^{i_n}.
+\end{aligned}
+\end{equation}
+By taking the expectation value of both sides and doing a simple relabeling, equation \eqref{eq:divergences} guarantees
+\begin{equation}
+\ev{x^{i_1}\cdots x^{i_n}}=\hbar\sum_{r=2}^n A^{i_1 i_r}\ev{x^{i_2}\cdots \widehat{x^{i_r}}\cdots x^{i_n}}.
+\end{equation}
+This recurrence relation instructs us to pair the element $x^{i_1}$ which any element $x^{i_r}$ in the list $(x^{i_2},\dots,x^{i_n})$, remove these two and replace them by $A^{i_1 i_r}$, and take the expectation value of the rest. By the symmetry of our $\mu$, it is clear that if $n$ is odd, the expectation value is null. On the other hand, if $n$ is even, given that $\ev{1}=1$ we can continue our recursion relation to
+\begin{equation}
+\ev{x^{i_1}\cdots x^{i_n}}=\hbar^{n/2}\sum_{P\in\text{Pair}(n)}\prod_{\{r,s\}\in P} A^{i_r i_s},
+\end{equation}
+where the set of pairings $\text{Pair}(n)$ is defined to be the set of partitions of $\{1,\dots,n\}$ into sets of 2 elements. This is of course just Wick's theorem! We've found a way of computing expectation values without actually needing to integrate. Although there is a measure $\mu$ in this case, knowledge of $\Div_\mu$ was the only thing we needed to proof this theorem.
+
+Much like before, we can build a homological picture of this construction. To see this, note that
+\begin{equation}
+-\hbar\Div_\mu=x^i A_{ij}\dd{x}^j-\hbar\pdv{x^i}\dd{x^i}.
+\end{equation}
+The last term is to be understood as a composition, i.e.
+\begin{equation}
+\pdv{x^i}\dd{x^i}\qty(V^j\pdv{x^j})=\pdv{x^i}\qty(V^j\dd{x^i}\qty(\pdv{x^j}))=\pdv{x^i}\qty(V^j\pdv{x^i}{x^j})=\pdv{V^i}{x^i}.
+\end{equation}
+Let us denote $\xi_i:=\pdv*{x^i}$. Restricting the partial derivatives to $V^*$, we can identify $(\xi_1,\dots,\xi_N)$ as the basis of $V^{**}\cong V$ dual to $(x^1,\dots,x^N)$. In other words, we have the isomorphism
+\begin{equation}\label{eq:polynomial_vectors}
+\Vect(V)\cong \mathcal{F}(V)\otimes V\subseteq\mathcal{F}(V\oplus\Pi V^*).
+\end{equation}
+We can now define the operator $\pdv*{\xi_i}$ on $\mathcal{F}(V\oplus\Pi V^*)$ by mimicking the definition of $\pdv*{c^a}$ on $\mathcal{F}(V\oplus\Pi \g)$ in the previous section. Then, defining
+\begin{equation}
+Q:=x^i A_{ij}\pdv{\xi_j}-\hbar\pdv{}{x^i}{\xi_i}:\mathcal{F}(V\oplus\Pi V^*)\rightarrow\mathcal{F}(V\oplus\Pi V^*),
+\end{equation}
+we see that $Q$ and $-\hbar\Div_\mu$ coincide on $\Vect(V)$. In fact, we get a chain complex 
+\begin{equation}
+\begin{tikzcd}
+\cdots\arrow[r,"Q_3"]&\mathcal{F}(V)\otimes V\wedge V\arrow[r,"Q_2"]&\mathcal{F}(V)\otimes V \arrow[r,"Q_1"]&\mathcal{F}(V)\arrow[r,"Q_0"]& 0.
+\end{tikzcd}
+\end{equation}
+This deserves the name of chain complex because $Q^2=0$. Given arguments like the one in equation \eqref{eq:differential_property}, we can conclude this from $Q^2\xi_i=0$. In fact, the last is now trivial since $Q_0=0$. The equation \eqref{eq:image_Q} then that
+\begin{equation}
+H_0\qty(\mathcal{F}(V)\otimes\bigwedge\nolimits^\bullet V,Q)=\faktor{\ker Q_0}{\im Q_1}=\faktor{\mathcal{F}(V)}{\im Q_1}\cong\mathbb{R}.
+\end{equation}
+Then we conclude our expectation value map is precisely the projection
+\begin{equation}
+\ev{\cdot}:\mathcal{F}(V)\rightarrow H_0\qty(\mathcal{F}(V)\otimes\bigwedge\nolimits^\bullet V,Q),
+\end{equation}
+once we fix $\ev{1}=1$.
+
+We conclude by studying the classical limit. The advantage of studying $-\hbar\Div_\mu$ instead of $\Div_\mu$ is that the former is well behaved in this limit. Indeed, if $\hbar\rightarrow 0$ we obtain $Q=\pdv{S}{x^i}\pdv{\xi_i}$. In particular, $Q=0$ corresponds to the classical equations of motion. Thus $H_0\qty(\mathcal{F}(V)\otimes\bigwedge\nolimits^\bullet V,Q)$ corresponds to on-shell observables.
+
+\section{Free Real Scalar Field}
+
+Proceeding by analogy with the previous example, let us now proceed to consider the free real scalar field. Let $M$ be a Riemannian manifold with metric tensor $g$. The space of field configurations of the real scalar field is the vector space $C^\infty(M)$. Let us however organize this in a local fashion. For every open $U\subseteq M$, the space of field configurations on $U$ is given by $C^\infty(U)$. The action for the free scalar field is the map
+\begin{equation}
+\begin{aligned}
+S:C^\infty_c(M)&\rightarrow\mathbb{R}\\
+\varphi&\mapsto -\frac{1}{2}\int\dd{\vol_g}\varphi(\Delta_g-m^2)\varphi,
+\end{aligned}
+\end{equation}
+with $\dd{\vol_g}$ the volume form on $M$ and $\Delta_g$ the associated Laplace-Beltrami operator. The chosen Lagrangian only differs from the usual one (after Wick rotation) by a total derivative, which does not contribute to the action for compactly supported functions. Indeed, on a chart $(U,x)$ we have
+\begin{equation}
+\begin{aligned}
+-\frac{1}{2}\varphi(\Delta_g-m^2)\varphi=\frac{1}{2}(\partial\varphi)^2+\frac{1}{2}m^2\varphi^2-\nabla^\mu(\varphi\nabla_\mu\varphi).
+\end{aligned}
+\end{equation}
+However, this form is more directly comparable to the action on our previous section
+\begin{equation}\label{eq:dictionary}
+\begin{aligned}
+i\in\{1,\dots, N\}&\mapsto x\in M,\\
+v\in V&\mapsto \varphi\in C^\infty(M),\\
+x^i(v)&\mapsto\varphi(x),\\
+x^i(v)A_{ij}x^j(v)&\mapsto -\int\dd{\vol_g}\varphi(\Delta_g-m^2)\varphi.
+\end{aligned}
+\end{equation}
+The positive definiteness of $A$ corresponds now to the negative spectrum of $\Delta_g$.
+
+We wish to use our previous technique to make sense of integrals of the form
+\begin{equation}
+\int\mathcal{D}\varphi e^{-\frac{1}{\hbar}S(\varphi)}\mathcal{O}(\varphi)
+\end{equation}
+However, unlike our previous case, we don't actually have a measure to define our divergence operator. Thus, we will instead propose a divergence operator that reproduces the one we had under the dictionary \eqref{eq:dictionary}. Let us begin by describing the codomain of this map, i.e. the ring of polynomial functions on our configuration space. Much like in the finite dimensional case, we will take the symmetric algebra of an appropriate dual as our first attempt of such a ring. When equipped with its usual topology, the continuous dual of $C^\infty(U)$ is given by the compactly supported distributions on $U$ \cite[see][Theorem 2.3.1]{Hormander2003}. Let us take a particularly well behaved subspace of this, namely $C^\infty_c(U)$. Each $g\in C^\infty_c(U)$ acts on $\varphi\in C^\infty(U)$ via
+\begin{equation}
+g(\varphi):=\int_U\dd{\vol_g}g\varphi.
+\end{equation}
+We thus define $\tilde{\mathcal{F}}(C^\infty(U)):=S^\bullet C^\infty_c(U)$. Omitting the tensor product symbol again, for every $g_1,\dots,g_n\in C^\infty_c(U)$, we have that $g_1\cdots g_n$ acts on $\varphi\in C^\infty(U)$ via
+\begin{equation}\label{eq:simple_polynomials}
+\begin{aligned}
+g_1\cdots g_n(\varphi):=&g_1(\varphi)\cdots g_n(\varphi)\\
+=&\int_{U^n}\dd{\vol_g^n}(x_1,\dots, x_n)g(x_1)\cdots g(x_n)\varphi(x_1)\cdots\varphi(x_n).
+\end{aligned}
+\end{equation}
+In here $\dd{\vol_g^n}$ is the measure induced by the product metric on $M^n$. In light of equation \eqref{eq:polynomial_vectors}, we define the polynomial vector fields as $\widetilde{\Vect}(C^\infty(U)):=\tilde{\mathcal{F}}(C^\infty(U))\otimes C^\infty(U)$. In fact, let us instead consider 
+\begin{equation}
+\widetilde{\Vect}_c(C^\infty(U)):=\tilde{\mathcal{F}}(C^\infty(U))\otimes C^\infty_c(U).
+\end{equation}
+
+Every $g\in C^\infty_c(U)$ acts on a linear fashion on $C^\infty(U)$. It is thus simple to calculate its directional derivative with respect to $\varphi\in C^\infty(U)$
+\begin{equation}
+{\fdv{g}{\varphi}}(\psi)=\lim_{t\rightarrow 0}\frac{g(\psi+t\varphi)-g(\psi)}{t}=g(\varphi)\equiv\fdv{g}{\varphi}.
+\end{equation}
+We can then extend this definition to all of $\tilde{\mathcal{F}}(C^\infty(U))$ via the Leibniz rule. For every $g^1,\dots,g^n,\varphi\in C^\infty_c(U)$, we denote the element of $\widetilde{\Vect}_c(C^\infty(U))$ constructed as the tensor product of $g^1\cdots g^n\in\tilde{F}(C^\infty(U))$ and $\varphi$ by $g^1\cdots g^n\fdv*{\varphi}$. This element acts on a polynomial $f\in\tilde{F}(C^\infty(U))$ via 
+\begin{equation}
+f\mapsto g^1\cdots g^n\fdv{f}{\varphi}\in\tilde{F}(C^\infty(U)). 
+\end{equation}
+Thus, mimicking \eqref{eq:divergence_formula}, we define the divergence
+\begin{equation}\label{eq:infinite_divergence}
+\begin{aligned}
+-\hbar\Div_S:\widetilde{\Vect}_c(C^\infty(U))\rightarrow&\tilde{\mathcal{F}}(C^\infty(U))\\
+g^1\cdots g^n\fdv{\varphi}\mapsto&g^1\cdots g^n(\Delta_g-m^2) \varphi \\
+&-\hbar\sum_{r=1}^n g^1\cdots \widehat{g_r}\cdots g^n \int_U\dd{\vol_g}g^r\varphi
+\end{aligned}
+\end{equation}
+Even though $-\hbar\Div_S$ makes sense on $\widetilde{\Vect}(C^\infty(U))$, we chose to work on $\widetilde{\Vect}_c(C^\infty(U))$ because otherwise the codomain wouldn't be $\tilde{\mathcal{F}}(C^\infty(U))$.
+
+Thus far the domains and codomains considered are purely algebraic. We will need to consider their completions in suitable topologies. Equation \eqref{eq:simple_polynomials} and the Stone-Weierstrass theorem suggest a simple extension of the notion of polynomial. Indeed, every $F\in C^\infty_c(U^n)$ induces a map
+\begin{equation}
+\begin{aligned}
+F:C^\infty(U)\rightarrow&C^\infty(U)\\
+\varphi\mapsto&F(\varphi):=\\
+&\int_{U^n}\dd{\vol_g^n}(x_1,\dots x_n)F(x_1,\dots,x_n)\varphi(x_1)\cdots\varphi(x_n).
+\end{aligned}
+\end{equation}
+This action is invariant under the action of the permutation group $S_n$ of $n$ letters on $C^\infty_c(U^n)$ given by
+\begin{equation}
+\begin{aligned}
+S_n\times C^\infty_c(U^n)&\rightarrow C^\infty_c(U^n)\\
+(\sigma,F)&\mapsto\qty{\begin{aligned}
+\sigma\triangleright F:U^n&\rightarrow\mathbb{R}\\
+(x_1,\dots,x_n)&\mapsto F(x_{\sigma(1)},\dots,x_{\sigma(n)})
+\end{aligned}}
+\end{aligned}
+\end{equation} 
+Thus, the map is completely determined by the image of $F$ on $\faktor{C^\infty_c(U^n)}{S_n}=:C^\infty_c(U^n)_{S_n}$. We thus, redefine the space of polynomials on $C^\infty(U)$ as 
+\begin{equation}
+\mathcal{F}(C^\infty(U)):=\bigoplus_{n=0}^\infty C^\infty_c(U^n)_{S_n}.
+\end{equation}
+Via the Stone-Weierstrass theorem, $S^\bullet(C^\infty_c(U))$ is dense in $C^\infty_c(U^n)$. Thus, we get $\tilde{\mathcal{F}}(C^\infty(U))$ lies densely in $\mathcal{F}(C^\infty(U))$. With this redefinition we are tempted to take the set polynomial vector fields as $C^\infty_c(U^n)_{S_n}\otimes C^\infty_c(U)$. We take however the extension
+\begin{equation}
+\Vect_c(C^\infty(U))=C^\infty_c(U^n\times U)_{S_n},
+\end{equation}
+with the action on the first $n$ entries
+\begin{equation}
+\begin{aligned}
+S_n\times C^\infty_c(U^n\times U)&\rightarrow C^\infty_c(U^n\times U)\\
+(\sigma,X)&\mapsto\qty{\begin{aligned}
+\sigma\triangleright X:U^n\times U&\rightarrow\mathbb{R}\\
+(x_1,\dots,x_n,y)&\mapsto X(x_{\sigma(1)},\dots,x_{\sigma(n)},y).
+\end{aligned}}
+\end{aligned}
+\end{equation} 
+
+Now we can \textit{define} the expectation value map without the need of a path integral as the projection
+\begin{equation}
+\ev{\cdot}:\mathcal{F}(C^\infty(U))\rightarrow\faktor{\mathcal{F}(C^\infty(U))}{\im (-\hbar\Div_S)}.
+\end{equation}
+In particular, in light of equation \eqref{eq:infinite_divergence}, we get that for all $g^1,\dots,g^n,\varphi\in C^\infty_c(U)$
+\begin{equation}
+\ev{g^1\cdots g^n(\Delta_g-m^2)\varphi}=\hbar\sum_{r=1}^n\int\dd{\vol_g}g^r\varphi\ev{g^1\cdots\widehat{g^r}\cdots g^n}
+\end{equation}
+Taking $g^{n+1}\in\mathcal{F}(C^\infty(U))$, $G$ to be the Greens function of $\Delta_g-m^2$ and 
+\begin{equation}
+\varphi(x)=\int\dd{\vol_g}(y)G(x-y)g^{n+1}(y)\int_U\dd{\vol_g}(y)G(x-y)g^{n+1}(y),
+\end{equation}
+we obtain $(\Delta_g-m^2)\varphi=g^{n+1}$ and 
+\begin{equation}
+\ev{g^1\cdots g^{n+1}}=\hbar\sum_{r=1}^n\int_{U^2}\dd{\vol_g^2}(x,y)g^r(x)G(x-y)g^{n+1}(y)\ev{g^1\cdots\widehat{g^r}\cdots g^n}.
+\end{equation}
+Once again, this leads to Wick's theorem.

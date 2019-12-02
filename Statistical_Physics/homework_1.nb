@@ -1,0 +1,251 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9357,        243]
+NotebookOptionsPosition[      7809,        209]
+NotebookOutlinePosition[      8241,        226]
+CellTagsIndexPosition[      8198,        223]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 1", "Title",
+ CellChangeTimes->{{3.7800344559926076`*^9, 
+  3.7800344696995354`*^9}},ExpressionUUID->"cee386aa-fbc4-443c-9202-\
+55bc33d62fca"],
+
+Cell[CellGroupData[{
+
+Cell["2. d)", "Section",
+ CellChangeTimes->{{3.780034476734731*^9, 
+  3.780034486445713*^9}},ExpressionUUID->"0aef092c-cf05-4d73-87fc-\
+7ab11f86ad28"],
+
+Cell[TextData[{
+ "Let us first consider the case for the cubic lattice. Due to isotropy and \
+homogeneity of this lattice, we only need to consider the average time spent \
+at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    OverscriptBox["r", "\[RightVector]"], "=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"||", 
+       OverscriptBox["r", "\[RightVector]"], "||"}], ",", "0", ",", "0"}], 
+     ")"}]}], TraditionalForm]],ExpressionUUID->
+  "3c31c843-a717-4b7f-b0fb-b9970e1c31a9"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.7800345105263762`*^9, 3.780034551309327*^9}, {
+  3.7800345956826305`*^9, 3.780034657809554*^9}, {3.7800350709408655`*^9, 
+  3.78003512989124*^9}, {3.780035165884033*^9, 3.7800352364054832`*^9}, {
+  3.780035383619137*^9, 3.78003539530186*^9}, {3.7803564758045444`*^9, 
+  3.7803564807304926`*^9}},ExpressionUUID->"f6bd5421-61be-433f-982e-\
+5b6e47d48652"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"r", "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   FractionBox[
+    SuperscriptBox["E", 
+     RowBox[{"\[ImaginaryI]", " ", "q1", " ", "r"}]], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"2", "\[Pi]"}], ")"}], "3"], 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        FractionBox["1", "3"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cos", "[", "q1", "]"}], "+", 
+          RowBox[{"Cos", "[", "q2", "]"}], "+", 
+          RowBox[{"Cos", "[", "q3", "]"}]}], ")"}]}]}], ")"}]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{"q1", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"q2", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"q3", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.780034665248623*^9, 3.780034688938324*^9}, {
+   3.7800348012360578`*^9, 3.7800349600034924`*^9}, {3.7800352406241937`*^9, 
+   3.780035282642809*^9}, 3.780035333910778*^9, {3.780035484596109*^9, 
+   3.7800354926755404`*^9}, {3.7800355377043853`*^9, 3.780035554162427*^9}, {
+   3.780035609443568*^9, 3.780035674485654*^9}, {3.7802401703455544`*^9, 
+   3.780240247138779*^9}, {3.7802433626285458`*^9, 3.780243362862485*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"f17c981d-0272-462f-b23b-14cc0af8f50e"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.7800355546899676`*^9, 3.78003563061596*^9, 3.7800356754062395`*^9, 
+   3.7802401721727767`*^9, {3.7802402041092787`*^9, 3.7802402474859033`*^9}, 
+   3.780243363446906*^9, 3.780356486063128*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"1503f47a-7ce4-4bd8-a839-4ac14fdc2d44"],
+
+Cell[BoxData["1.5163860116895698`"], "Output",
+ CellChangeTimes->{
+  3.7800355546899676`*^9, 3.78003563061596*^9, 3.7800356754062395`*^9, 
+   3.7802401721727767`*^9, {3.7802402041092787`*^9, 3.7802402474859033`*^9}, 
+   3.780243363446906*^9, 3.780356486434746*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"a8cf4487-7c91-442a-b324-2d34c1cf7e4f"]
+}, Open  ]],
+
+Cell["\<\
+For the body centered cubic lattice we have the following result\
+\>", "Text",
+ CellChangeTimes->{{3.780356487967998*^9, 
+  3.7803565298362837`*^9}},ExpressionUUID->"34da3aa4-b895-44d6-844e-\
+37f16ec1bd54"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"r", "=", "0"}], "\[IndentingNewLine]", 
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   FractionBox[
+    SuperscriptBox["E", 
+     RowBox[{"\[ImaginaryI]", " ", "q1", " ", "r"}]], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"2", "\[Pi]"}], ")"}], "3"], 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        FractionBox["1", "4"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cos", "[", "q1", "]"}], "+", 
+          RowBox[{"Cos", "[", "q2", "]"}], "+", 
+          RowBox[{"Cos", "[", "q3", "]"}], "+", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"q1", "+", "q2", "+", "q3"}], "]"}]}], ")"}]}]}], ")"}]}]],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"q1", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"q2", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"q3", ",", 
+     RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.780243320783224*^9, 3.780243356638316*^9}, {
+  3.780341727036501*^9, 3.7803417437239933`*^9}, {3.780341774343916*^9, 
+  3.780341774752822*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"f20ba363-8024-4471-bf3f-8cac45683fd8"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.7802433495735703`*^9, 3.7802433574464445`*^9}, {
+   3.780341728455698*^9, 3.780341744203562*^9}, 3.780341775340248*^9, 
+   3.780356533378502*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"c8ad476b-6276-43ba-bf1b-e87f3402e61e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","slwcon",
+   "\"Numerical integration converging too slowly; suspect one of the \
+following: singularity, value of the integration is 0, highly oscillatory \
+integrand, or WorkingPrecision too small.\"",2,10,7,23793773421889029978,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7802433495802546`*^9, 3.7802433574551415`*^9}, {
+   3.780341728500577*^9, 3.7803417446952443`*^9}, 3.7803417753442373`*^9, 
+   3.780356533378502*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"77e283f0-31af-41cf-b171-7557977cbf85"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","eincr",
+   "\"The global error of the strategy GlobalAdaptive has increased more than \
+\\!\\(\\*RowBox[{\\\"2000\\\"}]\\) times. The global error is expected to \
+decrease monotonically after a number of integrand evaluations. Suspect one \
+of the following: the working precision is insufficient for the specified \
+precision goal; the integrand is highly oscillatory or it is not a \
+(piecewise) smooth function; or the true value of the integral is 0. \
+Increasing the value of the GlobalAdaptive option MaxErrorIncreases might \
+lead to a convergent numerical integration. NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"1.393012028544957`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"0.00003620724288534162`\\\"}]\\) for the integral and \
+error estimates.\"",2,10,8,23793773421889029978,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7802433495802546`*^9, 3.7802433574551415`*^9}, {
+   3.780341728500577*^9, 3.7803417446952443`*^9}, 3.7803417753442373`*^9, 
+   3.7803565349006805`*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"4aed0403-01c9-4df3-a427-f70f08a95f20"],
+
+Cell[BoxData["1.393012028544957`"], "Output",
+ CellChangeTimes->{{3.7802433495735703`*^9, 3.7802433574464445`*^9}, {
+   3.780341728455698*^9, 3.780341744203562*^9}, 3.780341775340248*^9, 
+   3.7803565349284544`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"1cee2a9c-1788-45ec-b5f1-867668e9b716"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 677},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "PastelColor.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 157, 3, 65, "Title",ExpressionUUID->"cee386aa-fbc4-443c-9202-55bc33d62fca"],
+Cell[CellGroupData[{
+Cell[761, 29, 150, 3, 59, "Section",ExpressionUUID->"0aef092c-cf05-4d73-87fc-7ab11f86ad28"],
+Cell[914, 34, 877, 21, 35, "Text",ExpressionUUID->"f6bd5421-61be-433f-982e-5b6e47d48652"],
+Cell[CellGroupData[{
+Cell[1816, 59, 1434, 35, 91, "Input",ExpressionUUID->"f17c981d-0272-462f-b23b-14cc0af8f50e"],
+Cell[3253, 96, 324, 5, 40, "Output",ExpressionUUID->"1503f47a-7ce4-4bd8-a839-4ac14fdc2d44"],
+Cell[3580, 103, 342, 5, 40, "Output",ExpressionUUID->"a8cf4487-7c91-442a-b324-2d34c1cf7e4f"]
+}, Open  ]],
+Cell[3937, 111, 216, 5, 31, "Text",ExpressionUUID->"34da3aa4-b895-44d6-844e-37f16ec1bd54"],
+Cell[CellGroupData[{
+Cell[4178, 120, 1253, 35, 91, "Input",ExpressionUUID->"f20ba363-8024-4471-bf3f-8cac45683fd8"],
+Cell[5434, 157, 274, 4, 40, "Output",ExpressionUUID->"c8ad476b-6276-43ba-bf1b-e87f3402e61e"],
+Cell[5711, 163, 605, 13, 21, "Message",ExpressionUUID->"77e283f0-31af-41cf-b171-7557977cbf85"],
+Cell[6319, 178, 1153, 20, 57, "Message",ExpressionUUID->"4aed0403-01c9-4df3-a427-f70f08a95f20"],
+Cell[7475, 200, 294, 4, 40, "Output",ExpressionUUID->"1cee2a9c-1788-45ec-b5f1-867668e9b716"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
