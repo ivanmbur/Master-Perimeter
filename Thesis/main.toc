@@ -2,13 +2,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Motivations for the BV Formalism}{5}{chapter.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Reformulation of Lie Algebras in the BV Formalism}{5}{section.1.1}% 
+\contentsline {section}{\numberline {1.1}Gaussian Integration}{5}{section.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Representations of Lie Algebras}{8}{section.1.2}% 
+\contentsline {section}{\numberline {1.2}Free Real Scalar Field}{9}{section.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Gaussian Integration}{12}{section.1.3}% 
+\contentsline {section}{\numberline {1.3}Reformulation of Lie Algebras in the BV Formalism}{12}{section.1.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Free Real Scalar Field}{16}{section.1.4}% 
+\contentsline {section}{\numberline {1.4}Representations of Lie Algebras}{15}{section.1.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Graded Linear Algebra}{21}{chapter.2}% 
 \defcounter {refsection}{0}\relax 

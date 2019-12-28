@@ -2129,15 +2129,15 @@
     <bcf:datasource type="file" datatype="bibtex">library.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Fiorenza2008</bcf:citekey>
-    <bcf:citekey order="2">Hewitt1975</bcf:citekey>
-    <bcf:citekey order="3">Rudin1991</bcf:citekey>
-    <bcf:citekey order="4">Kadison1997</bcf:citekey>
-    <bcf:citekey order="5">Karp1981</bcf:citekey>
-    <bcf:citekey order="6">Costello2016</bcf:citekey>
-    <bcf:citekey order="6">Gwilliam2018</bcf:citekey>
-    <bcf:citekey order="7">Hewitt1975</bcf:citekey>
-    <bcf:citekey order="8">Hormander2003</bcf:citekey>
+    <bcf:citekey order="1">Hewitt1975</bcf:citekey>
+    <bcf:citekey order="2">Rudin1991</bcf:citekey>
+    <bcf:citekey order="3">Kadison1997</bcf:citekey>
+    <bcf:citekey order="4">Karp1981</bcf:citekey>
+    <bcf:citekey order="5">Costello2016</bcf:citekey>
+    <bcf:citekey order="5">Gwilliam2018</bcf:citekey>
+    <bcf:citekey order="6">Hewitt1975</bcf:citekey>
+    <bcf:citekey order="7">Hormander2003</bcf:citekey>
+    <bcf:citekey order="8">Fiorenza2008</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
