@@ -1,0 +1,254 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{topDefectLines}{article}{}
+      \name{author}{5}{}{%
+        {{hash=255259c3a9929244a68e35b96eaa62db}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Chi-Ming},
+           giveni={C\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3a16ec05dbef1c1cdb1167ec5d4b98c2}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Ying-Hsuan},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=b719e8b5cc05fa2eb1b26850e9c7f520}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Shu-Heng},
+           giveni={S\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=386704fd3e20412d4cf404892e55a1e1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yifan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=af5100e70bae33651be44cc2fd0e83b8}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{4d10c961fbd2101031b662bb7233eb4d}
+      \strng{fullhash}{4fab73ed634a7384dc348e1f326ec3be}
+      \strng{bibnamehash}{4d10c961fbd2101031b662bb7233eb4d}
+      \strng{authorbibnamehash}{4d10c961fbd2101031b662bb7233eb4d}
+      \strng{authornamehash}{4d10c961fbd2101031b662bb7233eb4d}
+      \strng{authorfullhash}{4fab73ed634a7384dc348e1f326ec3be}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1029-8479}
+      \field{journaltitle}{Journal of High Energy Physics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Topological defect lines and renormalization group flows in two dimensions}
+      \field{volume}{2019}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1007/jhep01(2019)026
+      \endverb
+      \verb{eprint}
+      \verb 1802.04445
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/JHEP01(2019)026
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/JHEP01(2019)026
+      \endverb
+    \endentry
+    \entry{generalizedSymmetries}{article}{}
+      \name{author}{4}{}{%
+        {{hash=467a6baf6ae29d9a98d1ef08639cb409}{%
+           family={Gaiotto},
+           familyi={G\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=83cd64767b94ab11ba933548f7fb70ce}{%
+           family={Kapustin},
+           familyi={K\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1fe5d39fd0373c9697cb4ec1c1279f3}{%
+           family={Seiberg},
+           familyi={S\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=eb8c9461b5d8630ecca4841b0cae0481}{%
+           family={Willett},
+           familyi={W\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4fbe651954f4a06a8c7c1ec995244bf}
+      \strng{fullhash}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \strng{bibnamehash}{f4fbe651954f4a06a8c7c1ec995244bf}
+      \strng{authorbibnamehash}{f4fbe651954f4a06a8c7c1ec995244bf}
+      \strng{authornamehash}{f4fbe651954f4a06a8c7c1ec995244bf}
+      \strng{authorfullhash}{86d05914ebf3c0c6c4aadc5476a4be72}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Generalized Global Symmetries}}
+      \field{volume}{02}
+      \field{year}{2015}
+      \field{pages}{172}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP02(2015)172
+      \endverb
+      \verb{eprint}
+      \verb 1412.5148
+      \endverb
+    \endentry
+    \entry{monsterCFT}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=3a16ec05dbef1c1cdb1167ec5d4b98c2}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Ying-Hsuan},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=b719e8b5cc05fa2eb1b26850e9c7f520}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={Shu-Heng},
+           giveni={S\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3252bf8444b9c84bc15c362595bd135}
+      \strng{fullhash}{d3252bf8444b9c84bc15c362595bd135}
+      \strng{bibnamehash}{d3252bf8444b9c84bc15c362595bd135}
+      \strng{authorbibnamehash}{d3252bf8444b9c84bc15c362595bd135}
+      \strng{authornamehash}{d3252bf8444b9c84bc15c362595bd135}
+      \strng{authorfullhash}{d3252bf8444b9c84bc15c362595bd135}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{title}{Duality Defect of the Monster CFT}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1911.00042
+      \endverb
+    \endentry
+    \entry{seibergWitten:spinStructInString}{article}{}
+      \name{author}{2}{}{%
+        {{hash=03b3f2c3e902d517f46079975c454e25}{%
+           family={Seiberg},
+           familyi={S\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=499139cc4d3fda9ba3955fa766a07270}{%
+           family={Witten},
+           familyi={W\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4988cba589ae37dd08df6ce6f7bd4f8}
+      \strng{fullhash}{e4988cba589ae37dd08df6ce6f7bd4f8}
+      \strng{bibnamehash}{e4988cba589ae37dd08df6ce6f7bd4f8}
+      \strng{authorbibnamehash}{e4988cba589ae37dd08df6ce6f7bd4f8}
+      \strng{authornamehash}{e4988cba589ae37dd08df6ce6f7bd4f8}
+      \strng{authorfullhash}{e4988cba589ae37dd08df6ce6f7bd4f8}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucl. Phys.}
+      \field{title}{{Spin Structures in String Theory}}
+      \field{volume}{B276}
+      \field{year}{1986}
+      \field{pages}{272}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/0550-3213(86)90297-X
+      \endverb
+    \endentry
+    \entry{karchTongTurner:webOf2d}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d3d37f74976a4363b7fe31b9be8e4e27}{%
+           family={Karch},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e1841c0c41b5a5ffe8310253191fe07f}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d568123ff09e9026cd26871f2435aebe}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Stichting SciPost}%
+      }
+      \strng{namehash}{a401f80a348be07837a3af164b83e54b}
+      \strng{fullhash}{a401f80a348be07837a3af164b83e54b}
+      \strng{bibnamehash}{a401f80a348be07837a3af164b83e54b}
+      \strng{authorbibnamehash}{a401f80a348be07837a3af164b83e54b}
+      \strng{authornamehash}{a401f80a348be07837a3af164b83e54b}
+      \strng{authorfullhash}{a401f80a348be07837a3af164b83e54b}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{issn}{2542-4653}
+      \field{journaltitle}{SciPost Physics}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{A web of 2d dualities: ${\bf Z}_2$ gauge fields and Arf invariants}
+      \field{volume}{7}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.21468/scipostphys.7.1.007
+      \endverb
+      \verb{eprint}
+      \verb 1902.05550
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.21468/SciPostPhys.7.1.007
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.21468/SciPostPhys.7.1.007
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

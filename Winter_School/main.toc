@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}The $E_8$ Lattice}{2}{subsection.1.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}The Vertex Operator Algebra $V_{E_8}$}{3}{subsection.1.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}$E_8$ and Non-Anomalous Symmetries}{4}{section.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Gauging Symmetries of $E_8$}{4}{subsection.2.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Case Study: $\mathbb {Z}_2$ Symmetries}{5}{subsection.2.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Non-Anomalous Symmetries of $E_8$}{7}{subsection.2.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}The $VE_8$ CFT}{7}{subsection.2.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}$\bbZ _2$ Duality Defects}{7}{section.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}$E_8$ Partition Function and $\bbZ _2$ Twists}{8}{subsection.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Bosonization and Fermionization}{9}{subsection.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Kramers-Wannier Defects in $E_8$}{10}{subsection.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}A General Theorem and $\bbZ _n$ Duality Defects}{10}{section.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Calculation of the characters}{11}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}Automorphisms of the $D_8$attice}{12}{appendix.B}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C}Computation of Quotient Lattices}{12}{appendix.C}% 
