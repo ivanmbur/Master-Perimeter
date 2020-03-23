@@ -1,0 +1,493 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17460,        485]
+NotebookOptionsPosition[     15464,        446]
+NotebookOutlinePosition[     15807,        461]
+CellTagsIndexPosition[     15764,        458]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"a", "=", 
+  SuperscriptBox["1000", 
+   RowBox[{"-", "1"}]]}], "\[IndentingNewLine]", 
+ RowBox[{"\[Lambda]", "=", 
+  SuperscriptBox["10", 
+   RowBox[{"-", "5"}]]}]}], "Input",
+ CellChangeTimes->{{3.7935692235452876`*^9, 3.7935692802108574`*^9}, {
+  3.793569665538327*^9, 3.793569668208156*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"934934de-f37a-4683-b1af-9935764063a6"],
+
+Cell[BoxData[
+ FractionBox["1", "1000"]], "Output",
+ CellChangeTimes->{
+  3.7935696088707237`*^9, {3.7935696928263626`*^9, 3.7935697217710123`*^9}, 
+   3.793570934221373*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"837676f0-d894-4645-988e-f0e1eb8c15d6"],
+
+Cell[BoxData[
+ FractionBox["1", "100000"]], "Output",
+ CellChangeTimes->{
+  3.7935696088707237`*^9, {3.7935696928263626`*^9, 3.7935697217710123`*^9}, 
+   3.7935709342253633`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"c97beb21-30b1-4a4b-9c6d-9795ca22e98b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"P", "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["T", "2"], 
+     SuperscriptBox["\[Lambda]", "2"]}], 
+    RowBox[{"4", "\[Pi]"}]], 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["T", "2"], "2"]}]], 
+   FractionBox["1", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["a", "2"], "+", 
+       SuperscriptBox["T", "2"]}], ")"}], 
+     RowBox[{"3", "/", "2"}]]], 
+   RowBox[{"(", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["a", "2"], "+", 
+       SuperscriptBox["T", "2"]}]], "-", 
+     RowBox[{
+      SqrtBox[
+       FractionBox["\[Pi]", "2"]], 
+      SuperscriptBox["T", "2"], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        SuperscriptBox["T", "4"], 
+        RowBox[{"2", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["a", "2"], "+", 
+           SuperscriptBox["T", "2"]}], ")"}]}]]], 
+      RowBox[{"Erfc", "[", 
+       FractionBox[
+        SuperscriptBox["T", "2"], 
+        SqrtBox[
+         RowBox[{"2", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["a", "2"], "+", 
+            SuperscriptBox["T", "2"]}], ")"}]}]]], "]"}]}]}], ")"}]}]}]], \
+"Input",
+ CellChangeTimes->{{3.7935692837055187`*^9, 3.793569498021783*^9}, {
+  3.7935696732686286`*^9, 3.79356968333772*^9}, {3.793569750246947*^9, 
+  3.793569761235547*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"525a17c6-12f8-4cc1-9051-7b058833696d"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["T", "2"], "2"]}]], " ", 
+   SuperscriptBox["T", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       FractionBox["1", "1000000"], "+", 
+       SuperscriptBox["T", "2"]}]], "-", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        SuperscriptBox["T", "4"], 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox["1", "1000000"], "+", 
+           SuperscriptBox["T", "2"]}], ")"}]}]]], " ", 
+      SqrtBox[
+       FractionBox["\[Pi]", "2"]], " ", 
+      SuperscriptBox["T", "2"], " ", 
+      RowBox[{"Erfc", "[", 
+       FractionBox[
+        SuperscriptBox["T", "2"], 
+        RowBox[{
+         SqrtBox["2"], " ", 
+         SqrtBox[
+          RowBox[{
+           FractionBox["1", "1000000"], "+", 
+           SuperscriptBox["T", "2"]}]]}]], "]"}]}]}], ")"}]}], 
+  RowBox[{"40000000000", " ", "\[Pi]", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["1", "1000000"], "+", 
+      SuperscriptBox["T", "2"]}], ")"}], 
+    RowBox[{"3", "/", "2"}]]}]]], "Output",
+ CellChangeTimes->{{3.7935698499325156`*^9, 3.7935698646501846`*^9}, 
+   3.7935709383024673`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"c5f24c2e-abcb-4bc3-821d-8f0f78f06e8a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"T", ",", 
+      RowBox[{"N", "[", "P", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"T", ",", 
+      RowBox[{"{", 
+       RowBox[{"0.1", ",", "1", ",", "10", ",", "100", ",", "1000"}], "}"}]}],
+      "}"}]}], "]"}], "//", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.7935695182128243`*^9, 3.7935696008371935`*^9}, {
+  3.793569636956668*^9, 3.793569649982857*^9}, {3.793569733679227*^9, 
+  3.7935697438310595`*^9}, {3.793569788583479*^9, 3.7935698150597086`*^9}, {
+  3.793570943702038*^9, 3.793570953167742*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"2075f738-5c42-4322-947c-2d10adcd1221"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"5000.`\\\"}], \\\"]\\\"}]\\) is too small to represent as a normalized \
+machine number; precision may be lost.\"",2,4,1,23880472777337850604,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7935697947031107`*^9, 3.7935698199127398`*^9}, 
+   3.7935698672123375`*^9, 3.7935709536754265`*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"6de87f0e-a0f5-43b1-a518-27a44503d941"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","munfl",
+   "\"\\!\\(\\*RowBox[{\\\"Exp\\\", \\\"[\\\", RowBox[{\\\"-\\\", \
+\\\"500000.`\\\"}], \\\"]\\\"}]\\) is too small to represent as a normalized \
+machine number; precision may be lost.\"",2,4,2,23880472777337850604,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.7935697947031107`*^9, 3.7935698199127398`*^9}, 
+   3.7935698672123375`*^9, 3.7935709536913786`*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"8376d8f9-afd3-4ffc-96b1-95f3140e136a"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0.1`", "6.999489508705625`*^-12"},
+     {"1", "1.6619022809515121`*^-12"},
+     {"10", "1.4909590560607186`*^-35"},
+     {"100", "0.`"},
+     {"1000", "0.`"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.7935696016968956`*^9, 3.7935696149175653`*^9}, 
+   3.793569650457588*^9, 3.7935697011012506`*^9, {3.7935697443277316`*^9, 
+   3.7935698199316893`*^9}, 3.79356986723029*^9, 3.793570953699353*^9},
+ CellLabel->
+  "Out[4]//MatrixForm=",ExpressionUUID->"55b350ec-0c6a-41ef-97ba-\
+6b7c24837dea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"T", ",", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["T", "2"], 
+         SuperscriptBox["\[Lambda]", "2"]}], 
+        RowBox[{"4", "\[Pi]"}]], 
+       RowBox[{"NIntegrate", "[", 
+        RowBox[{
+         RowBox[{"u", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox["1", "2"]}], 
+            SuperscriptBox["a", "2"], 
+            SuperscriptBox["u", "2"]}]], 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox["1", "2"]}], 
+            SuperscriptBox["T", "2"], 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"1", "+", "u"}], ")"}], "2"]}]]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"u", ",", "0", ",", "\[Infinity]"}], "}"}]}], "]"}]}]}], 
+     "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"T", ",", 
+      RowBox[{"{", 
+       RowBox[{"0.1", ",", "1", ",", "10", ",", "100", ",", "1000"}], "}"}]}],
+      "}"}]}], "]"}], "//", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.7935699912827854`*^9, 3.7935701273800707`*^9}, {
+  3.7935702011848392`*^9, 3.7935702013533874`*^9}, {3.7935709582042823`*^9, 
+  3.7935709597172384`*^9}, {3.7935711546710243`*^9, 3.793571184905227*^9}, {
+  3.7935719924492836`*^9, 3.7935719950002527`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"f2940b95-4150-4750-9424-96836a5b1e49"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,14,17,
+   23880472777337850604,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7935701281210938`*^9, 3.7935702018630247`*^9, 3.793570960288712*^9, {
+   3.793571185511608*^9, 3.793571188292179*^9}, 3.793571995777216*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"0912c2ff-f674-481b-bb42-f9cb71a6501e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,14,18,
+   23880472777337850604,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7935701281210938`*^9, 3.7935702018630247`*^9, 3.793570960288712*^9, {
+   3.793571185511608*^9, 3.793571188292179*^9}, 3.7935719957941227`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"36791595-7679-4e0f-a9ea-174843302291"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0.1`", "6.999489508703928`*^-12"},
+     {"1", "1.6619022809514834`*^-12"},
+     {"10", "1.490959056063154`*^-35"},
+     {"100", "0.`"},
+     {"1000", "0.`"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.793570128218829*^9, 3.7935702018839984`*^9, 3.7935709603096547`*^9, {
+   3.793571185528591*^9, 3.79357118831312*^9}, 3.7935719958100386`*^9},
+ CellLabel->
+  "Out[14]//MatrixForm=",ExpressionUUID->"e841e4ea-ba0c-425a-9988-\
+a769920124ec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"T", ",", 
+      RowBox[{"NIntegrate", "[", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["\[Lambda]", "2"], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"2", "\[Pi]"}], ")"}], "3"], "2", 
+           RowBox[{"Norm", "[", 
+            RowBox[{"{", 
+             RowBox[{"kx", ",", "ky", ",", "kz"}], "}"}], "]"}]}]], 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox["1", "2"]}], 
+           SuperscriptBox["a", "2"], 
+           SuperscriptBox[
+            RowBox[{"Norm", "[", 
+             RowBox[{"{", 
+              RowBox[{"kx", ",", "ky", ",", "kz"}], "}"}], "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"Abs", "[", 
+           RowBox[{"FourierTransform", "[", 
+            RowBox[{
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", 
+                SuperscriptBox["t", "2"]}], "/", 
+               SuperscriptBox["T", 
+                RowBox[{" ", "2"}]]}]], ",", "t", ",", 
+             RowBox[{"1", "+", 
+              RowBox[{"Norm", "[", 
+               RowBox[{"{", 
+                RowBox[{"kx", ",", "ky", ",", "kz"}], "}"}], "]"}]}], ",", 
+             RowBox[{"FourierParameters", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", " ", 
+                RowBox[{"-", "1"}]}], "}"}]}]}], "]"}], "]"}], "2"]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"kx", ",", 
+          RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"ky", ",", 
+          RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"kz", ",", 
+          RowBox[{"-", "\[Infinity]"}], ",", "\[Infinity]"}], "}"}]}], 
+       "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"T", ",", 
+      RowBox[{"{", 
+       RowBox[{"0.1", ",", "1", ",", "10", ",", "100", ",", "1000"}], "}"}]}],
+      "}"}]}], "]"}], "//", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.793570220987916*^9, 3.793570348362523*^9}, {
+  3.7935704725003834`*^9, 3.7935705290263357`*^9}, {3.793570563581979*^9, 
+  3.793570585426643*^9}, {3.793570963745474*^9, 3.7935709653262496`*^9}, {
+  3.7935720043315487`*^9, 3.7935720096933837`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"4234e5c2-a212-416b-95e6-b5e9822116ff"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,15,19,
+   23880472777337850604,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.793570493028556*^9, 3.7935705299458666`*^9, 
+  3.793570589048956*^9, 3.7935709678255696`*^9, 3.793572015117762*^9},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"12d2f088-d9c5-4f86-82fa-09bb57d1402d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate","izero",
+   "\"Integral and error estimates are 0 on all integration subregions. Try \
+increasing the value of the MinRecursion option. If value of integral may be \
+0, specify a finite value for the AccuracyGoal option.\"",2,15,20,
+   23880472777337850604,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.793570493028556*^9, 3.7935705299458666`*^9, 
+  3.793570589048956*^9, 3.7935709678255696`*^9, 3.793572015178564*^9},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"82992aa9-8ee8-47b0-aa41-28b15d469f7a"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0.1`", "6.999489464807879`*^-12"},
+     {"1", "1.661902302976734`*^-12"},
+     {"10", "1.4909590334099312`*^-35"},
+     {"100", "0.`"},
+     {"1000", "0.`"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.7935704930923524`*^9, 3.7935705328191876`*^9, 
+  3.793570589099801*^9, 3.793570967876435*^9, 3.7935720151885357`*^9},
+ CellLabel->
+  "Out[15]//MatrixForm=",ExpressionUUID->"3777388f-e748-4009-b0a9-\
+ecd539715c6c"]
+}, Open  ]]
+},
+WindowSize->{1280, 677},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 396, 9, 48, "Input",ExpressionUUID->"934934de-f37a-4683-b1af-9935764063a6"],
+Cell[979, 33, 252, 5, 49, "Output",ExpressionUUID->"837676f0-d894-4645-988e-f0e1eb8c15d6"],
+Cell[1234, 40, 256, 5, 49, "Output",ExpressionUUID->"c97beb21-30b1-4a4b-9c6d-9795ca22e98b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1527, 50, 1521, 50, 73, InheritFromParent,ExpressionUUID->"525a17c6-12f8-4cc1-9051-7b058833696d"],
+Cell[3051, 102, 1387, 44, 107, "Output",ExpressionUUID->"c5f24c2e-abcb-4bc3-821d-8f0f78f06e8a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4475, 151, 693, 16, 28, "Input",ExpressionUUID->"2075f738-5c42-4322-947c-2d10adcd1221"],
+Cell[5171, 169, 540, 11, 23, "Message",ExpressionUUID->"6de87f0e-a0f5-43b1-a518-27a44503d941"],
+Cell[5714, 182, 542, 11, 23, "Message",ExpressionUUID->"8376d8f9-afd3-4ffc-96b1-95f3140e136a"],
+Cell[6259, 195, 926, 24, 119, "Output",ExpressionUUID->"55b350ec-0c6a-41ef-97ba-6b7c24837dea"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7222, 224, 1516, 41, 49, "Input",ExpressionUUID->"f2940b95-4150-4750-9424-96836a5b1e49"],
+Cell[8741, 267, 621, 13, 21, "Message",ExpressionUUID->"0912c2ff-f674-481b-bb42-f9cb71a6501e"],
+Cell[9365, 282, 623, 13, 21, "Message",ExpressionUUID->"36791595-7679-4e0f-a9ea-174843302291"],
+Cell[9991, 297, 875, 24, 119, "Output",ExpressionUUID->"e841e4ea-ba0c-425a-9988-a769920124ec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10903, 326, 2502, 64, 82, "Input",ExpressionUUID->"4234e5c2-a212-416b-95e6-b5e9822116ff"],
+Cell[13408, 392, 593, 12, 21, "Message",ExpressionUUID->"12d2f088-d9c5-4f86-82fa-09bb57d1402d"],
+Cell[14004, 406, 593, 12, 21, "Message",ExpressionUUID->"82992aa9-8ee8-47b0-aa41-28b15d469f7a"],
+Cell[14600, 420, 848, 23, 119, "Output",ExpressionUUID->"3777388f-e748-4009-b0a9-ecd539715c6c"]
+}, Open  ]]
+}
+]
+*)
+
