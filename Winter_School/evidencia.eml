@@ -1,0 +1,116 @@
+Delivered-To: ivanmbur@gmail.com
+Received: by 2002:a1c:4c15:0:0:0:0:0 with SMTP id z21csp2837332wmf;
+        Thu, 26 Mar 2020 22:00:16 -0700 (PDT)
+X-Google-Smtp-Source: ADFU+vvLpJZmtgV9GC1ACqmLWkNYM2E6shmDDsMHzZC5tpRX4ZbHI0vvG/PwN5LPwY1xsPJvdorp
+X-Received: by 2002:ad4:524c:: with SMTP id s12mr10257551qvq.52.1585285216639;
+        Thu, 26 Mar 2020 22:00:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1585285216; cv=none;
+        d=google.com; s=arc-20160816;
+        b=iniudMpyQNJ1/IOW+wYxbPVRT4j4aZq/X9PZNC7ZNhTBKM1K8b8h1oLTOYsCB/Edlr
+         ChPl/wqm+uNXyO2Bq8OTZEBPjHMQDBqD7WQr/DPY6TNdz3LfZAh5nC1HztZ6CGwBz9gG
+         lr72SliwCqKKUVzeUYnKayeYsyNKP7ktQgKE8UUYIuKiyb82xlDbV5+j8oHJa6EMVMOF
+         +pfAe1vS8AhPLbo7ncVrtYStrj77o86vFPilA4YBjZVO64HoScxvG+g/GrGLEtBceEvs
+         9frRu6SyOpoiOVT5tMHEqPs5wTIvcPDNYWrn6u7yDYrDt+VRJsXCRIXbsggEaFzix5uK
+         GieA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-post:list-archive:list-id:precedence
+         :content-transfer-encoding:mime-version:subject:references
+         :in-reply-to:message-id:cc:to:reply-to:from:dkim-signature:date;
+        bh=eidZe91v1zhFhgmedzIeeZM5suXFDxQlGiqbbUvWF74=;
+        b=vpxdoUDaIA4vcqRzsJTIoeT1nEtkbDNUkQkwLQZjAwHaJk1/F9vIlW2IXYEyUWB/1E
+         K3evcUVLiaah9m1dgaPAXUV8NpvtKO/iLYIE3tfgu26a5KqU3WuwQS7zmEJtGGwsLEXC
+         hx1hGUjQfQSP8c8WzUzVdu6Gcf3+tx9zapSu3JsqQl4ZJgmBPU1IDLfpfWWlYPSyX7Sy
+         aek4Vt9HzDqtLZFGqNCaOgOP39QSX/IAJ+A17g9/S59b2m+l5+s/VEV+3ayI8XsNX0/1
+         C/mg51Vka6ihm/Oj7GJDP0CTXpeAVBiISk2aeOK+g/CuqrEUtDEMRDh7TA7pHesjXITu
+         tRUw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass (test mode) header.i=@github.com header.s=pf2014 header.b="qUYY/kho";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.209 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-26.smtp.github.com (out-26.smtp.github.com. [192.30.252.209])
+        by mx.google.com with ESMTPS id f15si2938762qtg.228.2020.03.26.22.00.16
+        for <ivanmbur@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 26 Mar 2020 22:00:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.209 as permitted sender) client-ip=192.30.252.209;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@github.com header.s=pf2014 header.b="qUYY/kho";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.209 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+Date: Thu, 26 Mar 2020 22:00:15 -0700
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2014; t=1585285215;
+	bh=eidZe91v1zhFhgmedzIeeZM5suXFDxQlGiqbbUvWF74=;
+	h=Date:From:Reply-To:To:Cc:In-Reply-To:References:Subject:List-ID:
+	 List-Archive:List-Post:List-Unsubscribe:From;
+	b=qUYY/khoTLesuYXEfyLTq4VhlACWcXQBVQk7CKctPwDcVUvZGsj6q9D6QD4VDYs2a
+	 geSecwWheI3z7/EUXQYdPzuYxRfJgbK3DGv573L00c4d2Z+Z6tsdM9NMe6HibpnVeB
+	 iKzenviPtgTVD1G6pMjpnwj3KqWVbu0se8TCAErg=
+From: codeGlaze <notifications@github.com>
+Reply-To: Orcpub/orcpub <reply+AC4ELFZSFJ7SAILP423AL7F4RFUV7EVBNHHCFKY43Y@reply.github.com>
+To: Orcpub/orcpub <orcpub@noreply.github.com>
+Cc: =?UTF-8?B?SXbDoW4gTWF1cmljaW8gQnVyYmFubw==?= <ivanmbur@gmail.com>, 
+ Author <author@noreply.github.com>
+Message-ID: <Orcpub/orcpub/issue/334/issue_event/3170978292@github.com>
+In-Reply-To: <Orcpub/orcpub/issues/334@github.com>
+References: <Orcpub/orcpub/issues/334@github.com>
+Subject: Re: [Orcpub/orcpub] The information for the weapon Sun Blade is
+ wrong. For example, the Finesse property doesn't appear. (#334)
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e7d885fd6fdb_7f883fb0d1ecd968421ce";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Sender: codeGlaze
+X-GitHub-Recipient: ivanmbur
+X-GitHub-Reason: author
+List-ID: Orcpub/orcpub <orcpub.Orcpub.github.com>
+List-Archive: https://github.com/Orcpub/orcpub
+List-Post: <mailto:reply+AC4ELFZSFJ7SAILP423AL7F4RFUV7EVBNHHCFKY43Y@reply.github.com>
+List-Unsubscribe: <mailto:unsub+AC4ELFZSFJ7SAILP423AL7F4RFUV7EVBNHHCFKY43Y@reply.github.com>,
+ <https://github.com/notifications/unsubscribe/AC4ELFZFI3NBE7HQFHNXVMLRJQXF7ANCNFSM4LK3WRXQ>
+X-Auto-Response-Suppress: All
+X-GitHub-Recipient-Address: ivanmbur@gmail.com
+
+
+----==_mimepart_5e7d885fd6fdb_7f883fb0d1ecd968421ce
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Closed #334 via #344.
+
+-- 
+You are receiving this because you authored the thread.
+Reply to this email directly or view it on GitHub:
+https://github.com/Orcpub/orcpub/issues/334#event-3170978292
+----==_mimepart_5e7d885fd6fdb_7f883fb0d1ecd968421ce
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p></p>
+<p>Closed <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="581639390" data-permission-text="Title is private" data-url="https://github.com/Orcpub/orcpub/issues/334" data-hovercard-type="issue" data-hovercard-url="/Orcpub/orcpub/issues/334/hovercard" href="https://github.com/Orcpub/orcpub/issues/334">#334</a> via <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="588887944" data-permission-text="Title is private" data-url="https://github.com/Orcpub/orcpub/issues/344" data-hovercard-type="pull_request" data-hovercard-url="/Orcpub/orcpub/pull/344/hovercard" href="https://github.com/Orcpub/orcpub/pull/344">#344</a>.</p>
+
+<p style="font-size:small;-webkit-text-size-adjust:none;color:#666;">&mdash;<br />You are receiving this because you authored the thread.<br />Reply to this email directly, <a href="https://github.com/Orcpub/orcpub/issues/334#event-3170978292">view it on GitHub</a>, or <a href="https://github.com/notifications/unsubscribe-auth/AC4ELF65AREVPNEAZFVTSMLRJQXF7ANCNFSM4LK3WRXQ">unsubscribe</a>.<img src="https://github.com/notifications/beacon/AC4ELF7V4TMOQYPYOC2OAHTRJQXF7A5CNFSM4LK3WRX2YY3PNVWWK3TUL52HS4DFWZEXG43VMVCXMZLOORHG65DJMZUWGYLUNFXW5KTDN5WW2ZLOORPWSZGOXUAUT5A.gif" height="1" width="1" alt="" /></p>
+<script type="application/ld+json">[
+{
+"@context": "http://schema.org",
+"@type": "EmailMessage",
+"potentialAction": {
+"@type": "ViewAction",
+"target": "https://github.com/Orcpub/orcpub/issues/334#event-3170978292",
+"url": "https://github.com/Orcpub/orcpub/issues/334#event-3170978292",
+"name": "View Issue"
+},
+"description": "View this Issue on GitHub",
+"publisher": {
+"@type": "Organization",
+"name": "GitHub",
+"url": "https://github.com"
+}
+}
+]</script>
+----==_mimepart_5e7d885fd6fdb_7f883fb0d1ecd968421ce--
