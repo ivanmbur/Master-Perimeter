@@ -1,0 +1,61 @@
+\documentclass{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage{physics}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{cancel}
+
+\title{Solutions to Quantization of Gauge Systems}
+\author{Iván Mauricio Burbano Aldana}
+
+\begin{document}
+
+\chapter{Exercises: Chapter One}
+
+\section*{Exercise 1.1} 
+
+As suggested in the hint, we begin by differentiating the constraints with respect to the velocities
+\begin{equation}
+0=\pdv{\phi_m(q,p(q,\dot{q}))}{\dot{q}^n}=\pdv{\phi_m}{p_{n'}}\qty(q,p(q,\dot{q}))\pdv{p_{n'}}{\dot{q}^n}=\pdv{\phi_m}{p_{n'}}\qty(q,p(q,\dot{q}))\pdv{L}{\dot{q}^n}{\dot{q}^{n'}}.
+\end{equation}
+These shows that indeed the vectors considered are null vectors for the Hessian matrix. Now, taking the derivative with respect to the positions,
+\begin{equation}
+\begin{aligned}
+0&=\pdv{\phi_m(q,p(q,\dot{q}))}{q^n}=\pdv{\phi_m}{q^n}\qty(q,p(q,\dot{q}))+\pdv{\phi_m}{p_{n'}}\qty(q,p(q,\dot{q}))\pdv{p_{n'}}{q^n}\\
+&=\pdv{\phi_m}{q^n}\qty(q,p(q,\dot{q}))+\pdv{\phi_m}{p_{n'}}\qty(q,p(q,\dot{q}))\pdv{L}{q^n}{\dot{q}^{n'}}
+\end{aligned}
+\end{equation}
+
+\section*{Exercise 1.2}
+
+\begin{enumerate}[(a)]
+
+\item Well, consider the function $\Pi_i(q^n,\dot{q}^n):=\pdv{L}{\dot{q}^i}$. The constraint surface is then determined by $p_i=\Pi_i(q^n,\dot{q}^n)$. However, since the transformation $\dot{q}^n\mapsto \dot{q}^{m'},p_\alpha$ is invertible, we can rewrite $\Pi_i(q^n,\dot{q}^n)=P_i(q^n,\dot{q}^{m'},p_\alpha)$. Since the transformation $\dot{q}^n\mapsto \dot{q}^{m'},p_\alpha$ is precisely constructed from the relation $p_i=\Pi_i(q^n,\dot{q}^n)$, the equations $\Pi_i(q^n,\dot{q}^n)=P_i(q^n,\dot{q}^{m'},p_\alpha)$, for $i=\alpha$ reduce to trivial identities. On the other hand, the equations $p_{m'}=\Pi_{m'}(q^n,\dot{q}^n)=P_{m'}(q^n,\dot{q}^{m'},p_\alpha)$ are expected to not be trivial. As a consequence, $P_{m'}$ cannot depend on the $\dot{q}^{m'}$. If this wasn't the case, one could use $p_{m'}=P_{m'}(q^n,\dot{q}^{m'},p_\alpha)$ to express some of the $\dot{q}^{m'}$ in function of $q^n$, $p_\alpha$ and $p_{m'}$, meaning that the rank of the Hessian was bigger than $N-M'$.
+
+\item We have
+\begin{equation}
+\qty(\pdv{H}{\dot{q}^{m'}})_{q^n,p_\alpha}=P_{m'}-\pdv{L}{\dot{q}^{m'}}=P_{m'}-\Pi_{m'}=0.
+\end{equation}
+
+\item We have
+\begin{equation}
+\qty(\pdv{H}{p^\alpha})_{q^n}=\qty(\pdv{H}{p^\alpha})_{q^n,\dot{q}^{m'}}=\cancel{p_\beta\pdv{\dot{q}^\beta}{p^\alpha}}+\dot{q}^\alpha+\dot{q}^{m'}\pdv{P_{m'}}{p^\alpha}-\cancel{\pdv{L}{\dot{q}^\beta}\pdv{\dot{q}^\beta}{p_\alpha}}.
+\end{equation}
+
+\item Being stationary under such variations
+\begin{equation}
+\begin{aligned}
+0&=\delta\int(p_\alpha\dot{q}^\alpha+P_{m'}\dot{q}^{m'}-H)\\
+&=\int\left(\delta p_\alpha\dot{q}^\alpha+p_\alpha\pdv{\dot{q}^\alpha}{q^n}\delta q^n+p_\alpha\pdv{\dot{q}^\alpha}{p_\beta}\delta p_\beta+\pdv{P_{m'}}{q^n}\delta q^n\dot{q}^{m'}\right.\\
+&\hphantom{=\int}\left.\quad+\pdv{P_{m'}}{p_\beta}\delta p_\beta\dot{q}^{m'}-\pdv{H}{q^n}\delta q^n-\pdv{H}{p^\alpha}\delta p^\alpha\right)\\
+&=\int\left(\delta p_\alpha\qty(\cancel{\dot{q}^\alpha}+p_\beta\pdv{\dot{q}^\beta}{p_\alpha}+\cancel{\pdv{P_{m'}}{p_\alpha}\dot{q}^{m'}-\pdv{H}{p_\alpha}})\right.\\
+&\hphantom{=\int}\left.\delta q^n\qty(p_\alpha\pdv{\dot{q}^\alpha}{q^{n}}+\pdv{P_{m'}}{q^n}\dot{q}^{m'}-\pdv{H}{q^n})\right)\\
+&=\int\left(\delta p_\alpha\qty(p_\beta\pdv{\dot{q}^\beta}{p_\alpha})+\delta q^n\qty(p_\alpha\pdv{\dot{q}^\alpha}{q^{n}}+\pdv{P_{m'}}{q^n}\dot{q}^{m'}-\pdv{H}{q^n})\right)
+\end{aligned}
+\end{equation}
+
+\end{enumerate}
+
+Thanks to Qmechanic for the post \url{https://physics.stackexchange.com/questions/59936/primary-constraints-for-constrained-hamiltonian-systems/59953#59953}, which is very much what inspired the above solution. 
+\end{document}
